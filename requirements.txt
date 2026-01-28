@@ -1,4 +1,4 @@
-aiosqlite
+APScheduler
 asyncpg
 bcrypt
 beautifulsoup4
