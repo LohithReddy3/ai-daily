@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+asyncpg
+pydantic
+pydantic-settings
+python-dotenv
+feedparser
+python-multipart
+python-jose[cryptography]
+passlib[bcrypt]
+google-generativeai
+apscheduler
+beautifulsoup4
+httpx
