@@ -2,6 +2,7 @@ aiosqlite
 asyncpg
 bcrypt
 beautifulsoup4
+email-validator
 fastapi
 feedparser
 google-generativeai
