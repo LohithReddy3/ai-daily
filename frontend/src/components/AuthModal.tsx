@@ -14,6 +14,12 @@ interface AuthModalProps {
 
 export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
     const { signInWithPassword, signUp, signInWithGoogle } = useAuth();
+    const [isLogin, setIsLogin] = useState(true);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+    const [successMessage, setSuccessMessage] = useState<string | null>(null);
     const [fullName, setFullName] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
 
