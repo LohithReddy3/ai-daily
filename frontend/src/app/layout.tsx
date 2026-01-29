@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import { cn } from "@/lib/utils";
 
 import { CSPostHogProvider } from './providers';
+import { AuthProvider } from '@/context/AuthContext';
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
@@ -26,7 +27,9 @@ export default function RootLayout({
                 suppressHydrationWarning
             >
                 <CSPostHogProvider>
-                    {children}
+                    <AuthProvider>
+                        {children}
+                    </AuthProvider>
                 </CSPostHogProvider>
             </body>
         </html>
