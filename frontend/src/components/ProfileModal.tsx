@@ -1,9 +1,6 @@
-"use client";
 import { useAuth } from "@/context/AuthContext";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
 import { LogOut, User as UserIcon, CheckCircle2, ShieldCheck } from "lucide-react";
 
 interface ProfileModalProps {
@@ -31,10 +28,10 @@ export default function ProfileModal({ isOpen, onClose }: ProfileModalProps) {
                 {/* Header Profile Section */}
                 <div className="bg-[#002B52] p-8 text-center border-b border-white/10 relative">
                     <div className="absolute top-4 right-4">
-                        <Badge variant="outline" className="bg-emerald-500/10 text-emerald-400 border-emerald-500/20 gap-1.5 py-1 px-3">
+                        <div className="inline-flex items-center rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2.5 py-0.5 text-xs font-semibold text-emerald-400 gap-1.5 transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">
                             <ShieldCheck size={12} />
                             Verified Account
-                        </Badge>
+                        </div>
                     </div>
 
                     <div className="flex justify-center mb-4 mt-4">
