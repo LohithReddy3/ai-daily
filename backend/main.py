@@ -20,10 +20,24 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="AI Daily API", lifespan=lifespan)
 
+import os
+
 # CORS
+origins = [
+    "http://localhost:3000",
+    "http://localhost:3001",
+]
+
+frontend_url = os.getenv("FRONTEND_URL")
+if frontend_url:
+    origins.append(frontend_url)
+
+# Allow all for now to permit Vercel preview deployments if needed, or stick to strict list
+# origins = ["*"] 
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:3001"],
+    allow_origins=["*"], # Temporarily allowing all to prevent CORS issues on first deploy
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
