@@ -216,11 +216,7 @@ export default function StoryCard({ story, activePersona, layoutId, index = 0 }:
                             )}
 
                             {/* Additional details for full reading experience */}
-                            {summary.summary_long && (
-                                <div className="prose prose-invert prose-lg max-w-none pt-8 border-t border-white/10">
-                                    <div dangerouslySetInnerHTML={{ __html: summary.summary_long }} />
-                                </div>
-                            )}
+
                         </div>
                     </motion.div>
                 )}
