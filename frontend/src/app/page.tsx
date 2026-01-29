@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import api from '@/lib/api';
 import { Persona, Story } from '@/types';
 import StoryCard from '@/components/StoryCard';
+import ProfileModal from '@/components/ProfileModal';
 import { Code2, Briefcase, FlaskConical, RefreshCw, X, Menu, Lightbulb, Loader2, Newspaper, Compass, Bookmark, Settings } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -60,6 +61,7 @@ export default function Home() {
     }, [activePersona, activeCategory, activeView, user]); // Add dependencies
 
     const [isSidebarOpen, setSidebarOpen] = useState(false);
+    const [isProfileOpen, setProfileOpen] = useState(false);
 
     const hierarchy: Record<Persona, { label: string; icon: any; color: string; categories: string[] }> = {
         builders: {
@@ -258,11 +260,11 @@ export default function Home() {
                                         <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-xs ring-1 ring-blue-500/50">
                                             {user.email?.[0].toUpperCase()}
                                         </div>
-                                        <div className="flex-1 min-w-0">
+                                        <div className="flex-1 min-w-0 cursor-pointer group" onClick={() => setProfileOpen(true)}>
                                             <div className="text-xs font-medium text-white/80 truncate">{user.email}</div>
-                                            <button onClick={() => signOut()} className="text-[10px] text-red-400 hover:text-red-300 uppercase tracking-wider font-bold mt-0.5">
-                                                Sign Out
-                                            </button>
+                                            <div className="text-[10px] text-slate-400 group-hover:text-white uppercase tracking-wider font-bold mt-0.5 transition-colors">
+                                                View Profile
+                                            </div>
                                         </div>
                                     </div>
                                 ) : (
@@ -347,6 +349,8 @@ export default function Home() {
                     )}
                 </main>
             </div>
+
+            <ProfileModal isOpen={isProfileOpen} onClose={() => setProfileOpen(false)} />
         </div>
     );
 }
