@@ -14,12 +14,8 @@ interface AuthModalProps {
 
 export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
     const { signInWithPassword, signUp, signInWithGoogle } = useAuth();
-    const [isLogin, setIsLogin] = useState(true);
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState<string | null>(null);
-    const [successMessage, setSuccessMessage] = useState<string | null>(null);
+    const [fullName, setFullName] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -33,12 +29,25 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                 if (error) throw error;
                 onClose();
             } else {
-                const { error } = await signUp(email, password);
+                // Validation for Sign Up
+                if (password !== confirmPassword) {
+                    throw new Error("Passwords do not match");
+                }
+                if (!fullName.trim()) {
+                    throw new Error("Full Name is required");
+                }
+
+                const { error } = await signUp(email, password, fullName);
                 if (error) throw error;
-                setSuccessMessage("Check your email for the confirmation link!");
+                setSuccessMessage(`Confirmation link sent to ${email}. Please verify to log in.`);
             }
         } catch (err: any) {
-            setError(err.message || "An error occurred");
+            console.error("Auth Error:", err);
+            // Better error message handling
+            let msg = err.message || "An error occurred";
+            if (msg.includes("rate limit")) msg = "Too many requests. Please wait a moment.";
+            if (msg.includes("security purposes")) msg = "Please use a different password or email.";
+            setError(msg);
         } finally {
             setLoading(false);
         }
@@ -64,12 +73,28 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                             <Check className="w-6 h-6" />
                         </div>
                         <p className="text-slate-200">{successMessage}</p>
-                        <Button variant="outline" onClick={onClose} className="w-full">
+                        <p className="text-xs text-slate-400">If you don't see it, check your spam folder.</p>
+                        <Button variant="outline" onClick={onClose} className="w-full mt-2">
                             Close
                         </Button>
                     </div>
                 ) : (
                     <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+                        {!isLogin && (
+                            <div className="space-y-2">
+                                <Label htmlFor="fullName">Full Name</Label>
+                                <Input
+                                    id="fullName"
+                                    type="text"
+                                    placeholder="John Doe"
+                                    value={fullName}
+                                    onChange={(e) => setFullName(e.target.value)}
+                                    required
+                                    className="bg-slate-800 border-slate-700 focus:border-blue-500"
+                                />
+                            </div>
+                        )}
+
                         <div className="space-y-2">
                             <Label htmlFor="email">Email</Label>
                             <Input
@@ -94,9 +119,24 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                             />
                         </div>
 
+                        {!isLogin && (
+                            <div className="space-y-2">
+                                <Label htmlFor="confirmPassword">Confirm Password</Label>
+                                <Input
+                                    id="confirmPassword"
+                                    type="password"
+                                    value={confirmPassword}
+                                    onChange={(e) => setConfirmPassword(e.target.value)}
+                                    required
+                                    className="bg-slate-800 border-slate-700 focus:border-blue-500"
+                                />
+                            </div>
+                        )}
+
                         {error && (
-                            <div className="text-red-400 text-sm bg-red-950/20 p-2 rounded border border-red-900/50">
-                                {error}
+                            <div className="text-red-400 text-sm bg-red-950/20 p-3 rounded border border-red-900/50 flex flex-col gap-1">
+                                <span className="font-semibold">Error:</span>
+                                <span>{error}</span>
                             </div>
                         )}
 
@@ -108,7 +148,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                         <div className="text-center text-sm">
                             <button
                                 type="button"
-                                onClick={() => setIsLogin(!isLogin)}
+                                onClick={() => { setIsLogin(!isLogin); setError(null); }}
                                 className="text-slate-400 hover:text-white underline underline-offset-4"
                             >
                                 {isLogin ? "Don't have an account? Sign up" : "Already have an account? Sign in"}
