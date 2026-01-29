@@ -62,3 +62,10 @@ from .scheduler import full_pipeline
 async def manual_pipeline(background_tasks: BackgroundTasks):
     background_tasks.add_task(full_pipeline)
     return {"message": "Pipeline triggered in background"}
+
+# Manual Seeding Endpoint
+from .scripts.seed_sources import seed as run_seed
+@app.get("/seed-sources")
+async def seed_sources_endpoint():
+    await run_seed()
+    return {"message": "Sources seeded successfully"}
