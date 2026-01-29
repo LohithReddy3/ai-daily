@@ -30,7 +30,7 @@ const AuthContext = createContext<AuthContextType>({
     signUp: async () => ({ error: null }),
     verifyOtp: async () => ({ error: null, session: null }),
     signOut: async () => { },
-    openAuthModal: () => { },
+    openAuthModal: () => { alert("DEBUG: Default Context (Not Connected)"); },
     closeAuthModal: () => { },
 });
 
@@ -126,8 +126,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     };
 
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const openAuthModal = () => { console.log('DEBUG: openAuthModal called'); setIsModalOpen(true); };
-    const closeAuthModal = () => { console.log('DEBUG: closeAuthModal called'); setIsModalOpen(false); };
+    const openAuthModal = () => { alert("DEBUG: Provider Function Called"); setIsModalOpen(true); };
+    const closeAuthModal = () => { setIsModalOpen(false); };
 
     return (
         <AuthContext.Provider value={{
