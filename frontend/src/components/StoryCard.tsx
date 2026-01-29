@@ -75,7 +75,7 @@ export default function StoryCard({ story, activePersona, layoutId, index = 0 }:
         }
     };
 
-    const summary = story.summaries.find(s => s.persona === activePersona);
+    const summary = story.summaries.find(s => s.persona === activePersona) || story.summaries[0];
     const hasSummary = !!summary;
     const date = new Date(story.created_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 
