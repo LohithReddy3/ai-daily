@@ -6,19 +6,22 @@ import StoryCard from '@/components/StoryCard';
 import { Code2, Briefcase, FlaskConical, RefreshCw, X, Menu, Lightbulb, Loader2, Newspaper, Compass, Bookmark, Settings } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useAuth } from '@/context/AuthContext';
 
 export default function Home() {
+    const { user, signOut } = useAuth(); // Destructure signOut
     const [stories, setStories] = useState<Story[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
     const [activePersona, setActivePersona] = useState<Persona>('builders');
     const [activeCategory, setActiveCategory] = useState<string | null>(null);
+    const [activeView, setActiveView] = useState<'feed' | 'saved'>('feed'); // New State
 
     const primaryNav = [
-        { id: 'brief', label: 'Brief', icon: Newspaper },
-        { id: 'explore', label: 'Explore', icon: Compass },
-        { id: 'saved', label: 'Saved', icon: Bookmark },
-        { id: 'settings', label: 'Settings', icon: Settings },
+        { id: 'brief', label: 'Brief', icon: Newspaper, action: () => { setActiveView('feed'); setActivePersona('builders'); } },
+        { id: 'explore', label: 'Explore', icon: Compass, action: () => { setActiveView('feed'); setActivePersona('explorers'); } },
+        { id: 'saved', label: 'Saved', icon: Bookmark, action: () => { setActiveView('saved'); setActiveCategory(null); } },
+        // Settings removed for now or can be just a placeholder
     ];
     // We only need the top 5 stories for this specific layout
     const visibleStories = stories.slice(0, 5);
@@ -27,14 +30,24 @@ export default function Home() {
         setLoading(true);
         setError('');
         try {
-            const params = new URLSearchParams({
-                timeframe: 'today',
-                persona: activePersona,
-            });
-            if (activeCategory) params.append('category', activeCategory);
+            if (activeView === 'saved') {
+                if (!user) {
+                    setStories([]); // Or show "Login to see saved" message
+                    setLoading(false);
+                    return;
+                }
+                const res = await api.get('/stories/saved/all');
+                setStories(res.data);
+            } else {
+                const params = new URLSearchParams({
+                    timeframe: 'today',
+                    persona: activePersona,
+                });
+                if (activeCategory) params.append('category', activeCategory);
 
-            const res = await api.get(`/stories/?${params.toString()}`);
-            setStories(res.data);
+                const res = await api.get(`/stories/?${params.toString()}`);
+                setStories(res.data);
+            }
         } catch (err) {
             console.error(err);
             setError('Intelligence connection lost.');
@@ -45,7 +58,7 @@ export default function Home() {
 
     useEffect(() => {
         fetchStories();
-    }, [activePersona, activeCategory]);
+    }, [activePersona, activeCategory, activeView, user]); // Add dependencies
 
     const [isSidebarOpen, setSidebarOpen] = useState(false);
 
@@ -92,7 +105,7 @@ export default function Home() {
                         <Menu size={18} className={cn("transition-transform", isSidebarOpen ? "rotate-90" : "")} />
                     </button>
 
-                    <div className="text-sm font-black tracking-tighter cursor-pointer" onClick={() => { setActivePersona('builders'); setActiveCategory(null); }}>
+                    <div className="text-sm font-black tracking-tighter cursor-pointer" onClick={() => { setActiveView('feed'); setActivePersona('builders'); setActiveCategory(null); }}>
                         AI<span className="text-white/40">DAILY</span>
                     </div>
 
@@ -100,11 +113,17 @@ export default function Home() {
 
                     {/* Current Context Indicator */}
                     <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider">
-                        <span className="text-white">{activePersonaData.label}</span>
-                        {activeCategory && (
+                        {activeView === 'saved' ? (
+                            <span className="text-yellow-400">Saved Stories</span>
+                        ) : (
                             <>
-                                <span className="text-white/40">/</span>
-                                <span className="text-[#004182]">{activeCategory}</span>
+                                <span className="text-white">{activePersonaData.label}</span>
+                                {activeCategory && (
+                                    <>
+                                        <span className="text-white/40">/</span>
+                                        <span className="text-[#004182]">{activeCategory}</span>
+                                    </>
+                                )}
                             </>
                         )}
                     </div>
@@ -146,28 +165,41 @@ export default function Home() {
                             <div className="flex-1 overflow-y-auto p-6 space-y-8 min-w-[320px]">
                                 {/* PRIMARY NAV */}
                                 <div className="space-y-1">
-                                    {primaryNav.map((item) => (
-                                        <button
-                                            key={item.id}
-                                            className="w-full flex items-center gap-3 text-left p-2 rounded-lg hover:bg-white/5 transition-colors group"
-                                        >
-                                            <item.icon size={18} className="text-white/40 group-hover:text-white transition-colors" />
-                                            <span className="text-sm font-bold uppercase tracking-wider text-white/60 group-hover:text-white transition-colors">{item.label}</span>
-                                        </button>
-                                    ))}
+                                    {primaryNav.map((item) => {
+                                        const isActive = (activeView === 'saved' && item.id === 'saved') || (activeView === 'feed' && item.id !== 'saved' && item.id !== 'settings'); // Simple logic
+                                        // Actually better logic:
+                                        // If view is saved, only Saved is active.
+                                        // If view is feed, maybe Brief/Explore are active?
+                                        // For now let's just make them clickable.
+
+                                        return (
+                                            <button
+                                                key={item.id}
+                                                onClick={item.action}
+                                                className={cn("w-full flex items-center gap-3 text-left p-2 rounded-lg transition-colors group",
+                                                    (activeView === 'saved' && item.id === 'saved') ? "bg-white/10 text-white" : "hover:bg-white/5 text-white/60"
+                                                )}
+                                            >
+                                                <item.icon size={18} className={cn("transition-colors", (activeView === 'saved' && item.id === 'saved') ? "text-yellow-400" : "text-white/40 group-hover:text-white")} />
+                                                <span className={cn("text-sm font-bold uppercase tracking-wider transition-colors", (activeView === 'saved' && item.id === 'saved') ? "text-white" : "group-hover:text-white")}>{item.label}</span>
+                                            </button>
+                                        )
+                                    })}
                                 </div>
 
                                 <div className="h-px bg-white/5" />
 
-                                {/* PERSONAS */}
+                                {/* PERSONAS (Only show if NOT in saved mode? Or allow switching back?) */}
+                                {/* Let's keep them, clicking them switches back to feed */}
                                 <div className="space-y-4">
                                     <div className="text-[10px] font-black uppercase tracking-widest text-white/30 px-2">Perspectives</div>
                                     {personas.map(([id, info]) => {
-                                        const isActive = activePersona === id;
+                                        const isActive = activePersona === id && activeView === 'feed';
                                         return (
                                             <div key={id} className="space-y-3">
                                                 <button
                                                     onClick={() => {
+                                                        setActiveView('feed');
                                                         setActivePersona(id);
                                                         if (activePersona !== id) setActiveCategory(null);
                                                     }}
@@ -218,6 +250,27 @@ export default function Home() {
                                         );
                                     })}
                                 </div>
+                            </div>
+
+                            {/* USER / SIGN OUT SECTION */}
+                            <div className="p-6 border-t border-white/10 bg-black/20">
+                                {user ? (
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-xs ring-1 ring-blue-500/50">
+                                            {user.email?.[0].toUpperCase()}
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                            <div className="text-xs font-medium text-white/80 truncate">{user.email}</div>
+                                            <button onClick={() => signOut()} className="text-[10px] text-red-400 hover:text-red-300 uppercase tracking-wider font-bold mt-0.5">
+                                                Sign Out
+                                            </button>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <button className="w-full py-2 bg-white/5 hover:bg-white/10 rounded border border-white/10 text-xs font-bold uppercase tracking-wider text-white/60">
+                                        Sign In
+                                    </button>
+                                )}
                             </div>
                         </motion.aside>
                     )}
