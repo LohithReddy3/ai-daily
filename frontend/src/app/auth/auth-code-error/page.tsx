@@ -18,7 +18,10 @@ export default function AuthErrorPage() {
                 <div className="space-y-2">
                     <h1 className="text-2xl font-bold font-outfit">Verification Failed</h1>
                     <p className="text-slate-400">
-                        {error || "We couldn't verify your email link. It may have expired or arguably already been used."}
+                        {error || "We couldn't verify your email link. It may have expired, or you opened it in a different browser."}
+                    </p>
+                    <p className="text-sm text-slate-500">
+                        Your account might still be active. Try logging in.
                     </p>
                 </div>
 
