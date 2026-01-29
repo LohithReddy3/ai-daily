@@ -14,12 +14,27 @@ router = APIRouter(
     tags=["stories"],
 )
 
+    now = datetime.utcnow()
+    # ... (date calculation logic remains check if I need to copy it? Yes I am replacing the whole function body or verify lines)
+    # The REPLACE block must match exactly.
+    # The user instruction was "Inject optional user". I'll use multi_replace or careful replace.
+    # Actually, because I'm adding logic at the end, I can replace the function signature and the return block.
+    # But wait, replacing the signature changes the arguments.
+    pass
+
+# I will use multi_replace for this to be safer, or just replace the whole function if it's small enough.
+# Lines 18-64 covers the function. It's about 46 lines. Reasonable.
+# I need to Import get_optional_current_user first.
+
+from ..dependencies import get_optional_current_user
+
 @router.get("/", response_model=List[schemas.Story])
 async def get_stories(
     timeframe: str = Query("today", enum=["today", "7d", "30d"]),
     persona: Optional[str] = None,
     category: Optional[str] = None,
-    db: AsyncSession = Depends(get_db)
+    db: AsyncSession = Depends(get_db),
+    user_data: Optional[dict] = Depends(get_optional_current_user)
 ):
     # Calculate date range
     now = datetime.utcnow()
@@ -31,7 +46,7 @@ async def get_stories(
         start_date = now - timedelta(days=30)
     
     from sqlalchemy import func
-    from ..models import Item
+    from ..models import Item, UserSave
 
     # Query stories
     # Join with StorySummary for filtering and Item for signal ranking
@@ -61,6 +76,22 @@ async def get_stories(
     # Use unique() because of the joins
     stories = result.scalars().unique().all()
     
+    # Check Persistence
+    if user_data:
+        user_id = user_data['id']
+        story_ids = [s.id for s in stories]
+        
+        # Determine which of these stories are saved by the user
+        save_stmt = select(UserSave.story_id).where(
+            UserSave.user_id == user_id,
+            UserSave.story_id.in_(story_ids)
+        )
+        save_result = await db.execute(save_stmt)
+        saved_story_ids = set(save_result.scalars().all())
+        
+        for story in stories:
+            story.is_saved = story.id in saved_story_ids
+            
     return stories
 
 @router.get("/{story_id}", response_model=schemas.Story)

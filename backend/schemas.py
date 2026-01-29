@@ -73,6 +73,7 @@ class Story(StoryBase):
     created_at: datetime
     items: List[Item] = []
     summaries: List[StorySummary] = []
+    is_saved: bool = False
     
     class Config:
         from_attributes = True

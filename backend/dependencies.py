@@ -37,3 +37,26 @@ async def get_current_user(token: str = Depends(oauth2_scheme)):
         
     user_data = response.json()
     return user_data # Contains 'id', 'email', etc.
+
+oauth2_scheme_optional = OAuth2PasswordBearer(tokenUrl="auth/login", auto_error=False)
+
+async def get_optional_current_user(token: Optional[str] = Depends(oauth2_scheme_optional)):
+    if not token or not SUPABASE_URL or not SUPABASE_KEY:
+        return None
+
+    async with httpx.AsyncClient() as client:
+        # We wrap in try block to prevent crashing on connection errors
+        try:
+            response = await client.get(
+                f"{SUPABASE_URL}/auth/v1/user",
+                headers={
+                    "Authorization": f"Bearer {token}",
+                    "apikey": SUPABASE_KEY
+                }
+            )
+            if response.status_code == 200:
+                return response.json()
+        except:
+            return None
+            
+    return None
