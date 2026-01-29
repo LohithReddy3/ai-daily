@@ -15,7 +15,6 @@ type AuthContextType = {
     signInWithPassword: (email: string, password: string) => Promise<{ error: any }>;
     signUp: (email: string, password: string, full_name: string) => Promise<{ error: any }>;
     verifyOtp: (email: string, token: string) => Promise<{ error: any; session: Session | null }>;
-    verifyOtp: (email: string, token: string) => Promise<{ error: any; session: Session | null }>;
     signOut: () => Promise<void>;
     openAuthModal: () => void;
     closeAuthModal: () => void;
