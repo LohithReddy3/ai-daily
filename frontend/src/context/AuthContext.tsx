@@ -126,8 +126,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     };
 
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const openAuthModal = () => setIsModalOpen(true);
-    const closeAuthModal = () => setIsModalOpen(false);
+    const openAuthModal = () => { console.log('DEBUG: openAuthModal called'); setIsModalOpen(true); };
+    const closeAuthModal = () => { console.log('DEBUG: closeAuthModal called'); setIsModalOpen(false); };
 
     return (
         <AuthContext.Provider value={{
@@ -137,6 +137,11 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
             openAuthModal, closeAuthModal
         }}>
             {children}
+            {isModalOpen && (
+                <div style={{ position: 'fixed', top: 0, left: 0, width: '100px', height: '100px', background: 'red', zIndex: 999999, content: 'DEBUG' }}>
+                    DEBUG: OPEN
+                </div>
+            )}
             <AuthModal isOpen={isModalOpen} onClose={closeAuthModal} />
         </AuthContext.Provider>
     );
