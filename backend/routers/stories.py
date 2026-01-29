@@ -77,3 +77,92 @@ async def get_story(story_id: str, db: AsyncSession = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Story not found")
         
     return story
+
+# --- Persistence Endpoints ---
+from ..models import User, UserSave
+from ..dependencies import get_current_user
+from sqlalchemy.dialects.postgresql import insert as pg_insert
+
+@router.post("/{story_id}/save")
+async def save_story(
+    story_id: str, 
+    user_data: dict = Depends(get_current_user), 
+    db: AsyncSession = Depends(get_db)
+):
+    user_id = user_data['id']
+    email = user_data.get('email')
+    
+    # 1. Sync User (Ensure exists in public.users)
+    # Using simple check-then-insert for SQLite compatibility (local) + Postgres
+    # For robust postgres, upsert is better, but let's be generic.
+    stmt = select(User).where(User.id == user_id)
+    result = await db.execute(stmt)
+    user = result.scalars().first()
+    
+    if not user:
+        new_user = User(id=user_id, email=email)
+        db.add(new_user)
+        # Flush to ensure ID exists for FK
+        await db.flush()
+        
+    # 2. Save Story
+    # Check if already saved
+    stmt = select(UserSave).where(
+        UserSave.user_id == user_id,
+        UserSave.story_id == story_id
+    )
+    result = await db.execute(stmt)
+    existing = result.scalars().first()
+    
+    if not existing:
+        save_entry = UserSave(user_id=user_id, story_id=story_id)
+        db.add(save_entry)
+        await db.commit()
+        return {"status": "saved", "saved": True}
+        
+    return {"status": "already_saved", "saved": True}
+
+@router.delete("/{story_id}/save")
+async def unsave_story(
+    story_id: str,
+    user_data: dict = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db)
+):
+    user_id = user_data['id']
+    
+    stmt = select(UserSave).where(
+        UserSave.user_id == user_id,
+        UserSave.story_id == story_id
+    )
+    result = await db.execute(stmt)
+    existing = result.scalars().first()
+    
+    if existing:
+        await db.delete(existing)
+        await db.commit()
+        return {"status": "unsaved", "saved": False}
+        
+    return {"status": "not_found", "saved": False}
+
+@router.get("/saved/all", response_model=List[schemas.Story])
+async def get_saved_stories(
+    user_data: dict = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db)
+):
+    user_id = user_data['id']
+    
+    # Sync user (just in case they saved via another method/trigger)
+    # Actually, if they have saved stories, they must verify.
+    
+    # Query stories joined with UserSave
+    stmt = (
+        select(Story)
+        .join(UserSave, Story.id == UserSave.story_id)
+        .where(UserSave.user_id == user_id)
+        .options(selectinload(Story.items), selectinload(Story.summaries))
+        .order_by(UserSave.saved_at.desc())
+    )
+    
+    result = await db.execute(stmt)
+    stories = result.scalars().unique().all()
+    return stories
