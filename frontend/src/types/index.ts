@@ -34,4 +34,5 @@ export interface Story {
     created_at: string;
     items: Item[];
     summaries: StorySummary[];
+    is_saved?: boolean;
 }

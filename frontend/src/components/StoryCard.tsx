@@ -19,10 +19,15 @@ interface StoryCardProps {
 
 export default function StoryCard({ story, activePersona, layoutId, index = 0 }: StoryCardProps) {
     const { user, openAuthModal } = useAuth();
-    const [isSaved, setIsSaved] = useState(false);
+    const [isSaved, setIsSaved] = useState(story.is_saved || false);
     const searchParams = useSearchParams();
     const router = useRouter();
     const pathname = usePathname();
+
+    // Sync state with prop if it changes (e.g. after refetch)
+    React.useEffect(() => {
+        setIsSaved(story.is_saved || false);
+    }, [story.is_saved]);
 
     // Check if this card is expanded based on URL
     const isExpanded = searchParams.get('story') === story.id;
@@ -42,7 +47,6 @@ export default function StoryCard({ story, activePersona, layoutId, index = 0 }:
 
     const handleSave = async (e: React.MouseEvent) => {
         e.stopPropagation();
-        alert(`DEBUG: User is ${user ? 'LOGGED IN (' + user.email + ')' : 'NULL'}`);
 
         if (!user) {
             openAuthModal();
