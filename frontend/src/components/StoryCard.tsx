@@ -7,6 +7,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 
+import { useAuth } from '@/context/AuthContext';
+
 interface StoryCardProps {
     story: Story;
     activePersona: Persona;
@@ -15,6 +17,7 @@ interface StoryCardProps {
 }
 
 export default function StoryCard({ story, activePersona, layoutId, index = 0 }: StoryCardProps) {
+    const { user, openAuthModal } = useAuth();
     const [isSaved, setIsSaved] = useState(false);
     const searchParams = useSearchParams();
     const router = useRouter();
@@ -34,6 +37,17 @@ export default function StoryCard({ story, activePersona, layoutId, index = 0 }:
     const handleClose = (e?: React.MouseEvent) => {
         e?.stopPropagation();
         router.back();
+    };
+
+    const handleSave = (e: React.MouseEvent) => {
+        e.stopPropagation();
+        // DEBUG: Temporary alert to verify interaction
+        alert(`DEBUG: Save Clicked. User detected: ${user ? 'Yes' : 'No'}`);
+        if (!user) {
+            openAuthModal();
+            return;
+        }
+        setIsSaved(!isSaved);
     };
 
     const summary = story.summaries.find(s => s.persona === activePersona);
@@ -141,10 +155,7 @@ export default function StoryCard({ story, activePersona, layoutId, index = 0 }:
                         {/* Sticky Header Action Bar */}
                         <div className="sticky top-0 right-0 left-0 p-6 flex justify-end gap-3 z-50 pointer-events-none bg-gradient-to-b from-[#004182] to-transparent">
                             <button
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    setIsSaved(!isSaved);
-                                }}
+                                onClick={handleSave}
                                 className={cn(
                                     "pointer-events-auto w-12 h-12 rounded-full flex items-center justify-center transition-all shadow-lg border",
                                     isSaved
