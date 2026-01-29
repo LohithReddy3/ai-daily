@@ -21,7 +21,7 @@ export default function Navbar() {
         <nav className="fixed top-0 left-0 w-64 h-full bg-zinc-950 border-r border-zinc-800 text-zinc-100 p-6 hidden md:flex flex-col">
             <div className="mb-10">
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-                    AI Daily
+                    AI Daily v2.0
                 </h1>
                 <p className="text-xs text-zinc-500 mt-1">Intelligence for Humans</p>
             </div>
