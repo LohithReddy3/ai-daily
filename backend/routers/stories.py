@@ -14,17 +14,7 @@ router = APIRouter(
     tags=["stories"],
 )
 
-    now = datetime.utcnow()
-    # ... (date calculation logic remains check if I need to copy it? Yes I am replacing the whole function body or verify lines)
-    # The REPLACE block must match exactly.
-    # The user instruction was "Inject optional user". I'll use multi_replace or careful replace.
-    # Actually, because I'm adding logic at the end, I can replace the function signature and the return block.
-    # But wait, replacing the signature changes the arguments.
-    pass
 
-# I will use multi_replace for this to be safer, or just replace the whole function if it's small enough.
-# Lines 18-64 covers the function. It's about 46 lines. Reasonable.
-# I need to Import get_optional_current_user first.
 
 from ..dependencies import get_optional_current_user
 
