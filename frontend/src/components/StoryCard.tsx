@@ -42,6 +42,7 @@ export default function StoryCard({ story, activePersona, layoutId, index = 0 }:
 
     const handleSave = async (e: React.MouseEvent) => {
         e.stopPropagation();
+        alert(`DEBUG: User is ${user ? 'LOGGED IN (' + user.email + ')' : 'NULL'}`);
 
         if (!user) {
             openAuthModal();
