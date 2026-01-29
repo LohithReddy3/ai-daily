@@ -3,10 +3,12 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import { useAuth } from '@/context/AuthContext';
 import { LayoutDashboard, Compass, Bookmark, Settings, LogOut } from 'lucide-react';
 
 export default function Navbar() {
     const pathname = usePathname();
+    const { user, signOut, openAuthModal } = useAuth();
 
     const navItems = [
         { name: 'Brief', href: '/', icon: LayoutDashboard },
@@ -47,10 +49,34 @@ export default function Navbar() {
             </div>
 
             <div className="mt-auto pt-6 border-t border-zinc-800/50">
-                <button className="flex items-center gap-3 px-4 py-2 text-zinc-500 hover:text-red-400 transition-colors w-full">
-                    <LogOut size={18} />
-                    <span className="text-sm">Sign Out</span>
-                </button>
+                {user ? (
+                    <div className="space-y-3">
+                        <div className="flex items-center gap-3 px-2">
+                            <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold border border-blue-500/30">
+                                {user.email?.[0].toUpperCase()}
+                            </div>
+                            <div className="overflow-hidden">
+                                <p className="text-xs font-medium text-white truncate">{user.email}</p>
+                                <p className="text-[10px] text-zinc-500">Free Plan</p>
+                            </div>
+                        </div>
+                        <button
+                            onClick={signOut}
+                            className="flex items-center gap-3 px-4 py-2 text-zinc-500 hover:text-red-400 transition-colors w-full rounded-lg hover:bg-red-400/10"
+                        >
+                            <LogOut size={16} />
+                            <span className="text-xs font-medium">Sign Out</span>
+                        </button>
+                    </div>
+                ) : (
+                    <button
+                        onClick={openAuthModal}
+                        className="flex items-center gap-3 px-4 py-3 text-blue-400 bg-blue-500/10 border border-blue-500/20 hover:bg-blue-500/20 transition-all w-full rounded-xl"
+                    >
+                        <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+                        <span className="text-sm font-bold">Sign In</span>
+                    </button>
+                )}
             </div>
         </nav>
     );

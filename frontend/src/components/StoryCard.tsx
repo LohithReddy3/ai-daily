@@ -40,15 +40,34 @@ export default function StoryCard({ story, activePersona, layoutId, index = 0 }:
         router.back();
     };
 
-    const handleSave = (e: React.MouseEvent) => {
+    const handleSave = async (e: React.MouseEvent) => {
         e.stopPropagation();
-        // DEBUG: Temporary alert to verify interaction
-        alert(`DEBUG: Save Clicked. User detected: ${user ? 'Yes' : 'No'}`);
+
         if (!user) {
             openAuthModal();
             return;
         }
+
+        // Optimistic Update
+        const previousState = isSaved;
         setIsSaved(!isSaved);
+
+        try {
+            if (!previousState) {
+                // Save
+                await api.post(`/stories/${story.id}/save`);
+                console.log('Story saved successfully');
+            } else {
+                // Unsave
+                await api.delete(`/stories/${story.id}/save`);
+                console.log('Story removed successfully');
+            }
+        } catch (error) {
+            console.error('Failed to save story:', error);
+            // Revert on error
+            setIsSaved(previousState);
+            alert("Error saving story. Please check console.");
+        }
     };
 
     const summary = story.summaries.find(s => s.persona === activePersona);
