@@ -19,7 +19,6 @@ export default function Home() {
 
     const primaryNav = [
         { id: 'brief', label: 'Brief', icon: Newspaper, action: () => { setActiveView('feed'); setActivePersona('builders'); } },
-        { id: 'explore', label: 'Explore', icon: Compass, action: () => { setActiveView('feed'); setActivePersona('explorers'); } },
         { id: 'saved', label: 'Saved', icon: Bookmark, action: () => { setActiveView('saved'); setActiveCategory(null); } },
         // Settings removed for now or can be just a placeholder
     ];

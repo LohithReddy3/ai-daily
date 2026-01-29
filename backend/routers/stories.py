@@ -186,4 +186,9 @@ async def get_saved_stories(
     
     result = await db.execute(stmt)
     stories = result.scalars().unique().all()
+    
+    # Explicitly mark as saved so UI shows the correct state (Gold Icon)
+    for story in stories:
+        story.is_saved = True
+        
     return stories
