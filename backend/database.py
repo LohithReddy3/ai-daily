@@ -34,7 +34,10 @@ else:
     # We must disable statement caching for PgBouncer transaction pooling
     engine = create_async_engine(
         DATABASE_URL, 
-        echo=True,
+        echo=False,
+        pool_size=2,
+        max_overflow=0,
+        pool_pre_ping=True,
         connect_args={
             "statement_cache_size": 0
         }
