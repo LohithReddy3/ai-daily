@@ -53,3 +53,12 @@ def read_root():
 @app.get("/health")
 def health_check():
     return {"status": "ok"}
+
+# Temporary Manual Trigger
+from fastapi import BackgroundTasks
+from .scheduler import full_pipeline
+
+@app.get("/run-pipeline")
+async def manual_pipeline(background_tasks: BackgroundTasks):
+    background_tasks.add_task(full_pipeline)
+    return {"message": "Pipeline triggered in background"}
