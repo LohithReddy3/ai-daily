@@ -13,7 +13,9 @@ type AuthContextType = {
     signInWithGoogle: () => Promise<void>;
     signInWithEmail: (email: string) => Promise<{ error: any }>;
     signInWithPassword: (email: string, password: string) => Promise<{ error: any }>;
-    signUp: (email: string, password: string) => Promise<{ error: any }>;
+    signInWithPassword: (email: string, password: string) => Promise<{ error: any }>;
+    signUp: (email: string, password: string, full_name: string) => Promise<{ error: any }>;
+    verifyOtp: (email: string, token: string) => Promise<{ error: any; session: Session | null }>;
     verifyOtp: (email: string, token: string) => Promise<{ error: any; session: Session | null }>;
     signOut: () => Promise<void>;
     openAuthModal: () => void;
@@ -27,7 +29,9 @@ const AuthContext = createContext<AuthContextType>({
     signInWithGoogle: async () => { },
     signInWithEmail: async () => ({ error: null }),
     signInWithPassword: async () => ({ error: null }),
+    signInWithPassword: async () => ({ error: null }),
     signUp: async () => ({ error: null }),
+    verifyOtp: async () => ({ error: null, session: null }),
     verifyOtp: async () => ({ error: null, session: null }),
     signOut: async () => { },
     openAuthModal: () => { alert("DEBUG: Default Context (Not Connected)"); },
@@ -100,11 +104,14 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         return { error };
     };
 
-    const signUp = async (email: string, password: string) => {
+    const signUp = async (email: string, password: string, full_name: string) => {
         const { error } = await supabase.auth.signUp({
             email,
             password,
             options: {
+                data: {
+                    full_name: full_name,
+                },
                 emailRedirectTo: `${window.location.origin}/auth/callback`,
             }
         });
