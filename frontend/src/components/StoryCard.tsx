@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 
 import { useAuth } from '@/context/AuthContext';
+import api from '@/lib/api';
 
 interface StoryCardProps {
     story: Story;
