@@ -57,8 +57,8 @@ async def get_stories(
     else:
         start_date = now - timedelta(days=30)
     
-    from sqlalchemy import func
-    from ..models import Item, UserSave
+from sqlalchemy import func
+from ..models import Item, UserSave
 
     # Query stories
     # Join with StorySummary for filtering and Item for signal ranking
