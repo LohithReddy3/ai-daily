@@ -26,14 +26,16 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        console.log("AuthModal: Handle Submit Triggered", { isLogin, email }); // DEBUG
+        alert("Debug: Form Submit. isLogin: " + isLogin);
+        console.log("Submit", { isLogin });
         setLoading(true);
         setError(null);
         setSuccessMessage(null);
 
         try {
             if (isLogin) {
-                console.log("AuthModal: Attempting Sign In..."); // DEBUG
+                alert("Debug: Calling Sign In API");
+                console.log("API Call");
                 const { error } = await signInWithPassword(email, password);
                 if (error) {
                     console.error("AuthModal: Sign In Failed", error); // DEBUG
@@ -201,8 +203,8 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                             className="w-full bg-blue-600 hover:bg-blue-700 text-white"
                             disabled={loading}
                             onClick={() => {
-                                console.log("Native Button Click");
-                                // alert("Debug: Button Clicked"); // Uncomment if console is empty
+                                alert("Debug: Native Button Click. Loading: " + loading);
+                                console.log("Click");
                             }}
                         >
                             {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
