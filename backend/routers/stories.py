@@ -29,7 +29,7 @@ async def get_stories(
     # Calculate date range
     now = datetime.utcnow()
     if timeframe == "today":
-        start_date = now - timedelta(hours=24)
+        start_date = now - timedelta(hours=48)
     elif timeframe == "7d":
         start_date = now - timedelta(days=7)
     else:
