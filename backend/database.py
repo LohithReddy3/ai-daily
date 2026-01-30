@@ -7,7 +7,16 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Default to sqlite for local dev if no env var, but plan for Postgres
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./sql_app.db")
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+if not DATABASE_URL:
+    print("⚠️ WARNING: DATABASE_URL not found, using SQLite fallback.")
+    DATABASE_URL = "sqlite:///./sql_app.db"
+else:
+    print("✅ INFO: DATABASE_URL found. Connecting to Postgres...")
+    # Mask password for logs
+    if "@" in DATABASE_URL:
+        print(f"   Host: {DATABASE_URL.split('@')[-1]}")
 
 # Handle Postgres dialect for asyncpg if needed later, but using synchronous psycopg2/standard for MVP simplicity with threads 
 # or use async engine. The plan mentioned asyncpg. Let's start with standard synchronous for simplicity 
