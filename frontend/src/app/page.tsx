@@ -315,7 +315,7 @@ export default function Home() {
                     ) : (
                         <>
                             {/* TOP ROW: 2 Stories (Scroll on mobile, 50% on desktop) */}
-                            <section className="h-auto md:flex-1 min-h-[400px] w-full rounded-2xl shadow-2xl border border-white/5 overflow-hidden shrink-0">
+                            <section className="h-auto md:flex-1 min-h-0 md:min-h-[400px] w-full rounded-2xl shadow-2xl border border-white/5 overflow-hidden shrink-0">
                                 <div className="h-full w-full grid grid-cols-1 md:grid-cols-2 bg-slate-900 gap-px">
                                     <AnimatePresence mode="popLayout">
                                         {visibleStories.slice(0, 2).map((story, index) => (
@@ -339,7 +339,7 @@ export default function Home() {
                             </section>
 
                             {/* BOTTOM ROW: 3 Stories (Scroll on mobile, 50% on desktop) */}
-                            <section className="h-auto md:flex-1 min-h-[600px] w-full rounded-2xl shadow-2xl border border-white/5 overflow-hidden shrink-0">
+                            <section className="h-auto md:flex-1 min-h-0 md:min-h-[600px] w-full rounded-2xl shadow-2xl border border-white/5 overflow-hidden shrink-0">
                                 <div className="h-full w-full grid grid-cols-1 md:grid-cols-3 bg-slate-900 gap-px">
                                     <AnimatePresence mode="popLayout">
                                         {visibleStories.slice(2, 5).map((story, index) => (

@@ -105,14 +105,14 @@ export default function StoryCard({ story, activePersona, layoutId, index = 0 }:
                 transition={{ delay: index * 0.05 }}
                 onClick={handleExpand}
                 className={cn(
-                    "relative group cursor-pointer w-full h-full min-h-[250px] md:min-h-0 overflow-hidden hover:z-10 text-white",
+                    "relative group cursor-pointer w-full h-full min-h-[160px] md:min-h-0 overflow-hidden hover:z-10 text-white",
                     "border-r border-b border-[#FFD200]/20 last:border-0 transition-colors duration-300",
                     "flex flex-col justify-between",
                     theme.bg,
                     theme.hover
                 )}
             >
-                <div className="p-3 md:p-4 flex justify-between items-start z-10 w-full mix-blend-plus-lighter shrink-0">
+                <div className="p-2 md:p-4 flex justify-between items-start z-10 w-full mix-blend-plus-lighter shrink-0">
                     <div className="flex gap-1 opacity-60 group-hover:opacity-100 transition-opacity">
                         <div className="w-1.5 h-1.5 rounded-full bg-[#FFD200] shadow-[0_0_8px_rgba(255,210,0,0.8)]" />
                         <div className="w-1.5 h-1.5 rounded-full bg-[#FFD200]/30" />
