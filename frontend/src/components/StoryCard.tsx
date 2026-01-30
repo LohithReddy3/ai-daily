@@ -131,7 +131,7 @@ export default function StoryCard({ story, activePersona, layoutId, index = 0 }:
                     <motion.h2
                         layoutId={`${cardId}-title`}
                         className={cn(
-                            "text-2xl lg:text-3xl font-black leading-[0.9] font-outfit uppercase tracking-tighter line-clamp-2 md:line-clamp-3 ml-[-1px]",
+                            "text-lg sm:text-xl lg:text-3xl font-black leading-[0.95] md:leading-[0.9] font-outfit uppercase tracking-tighter line-clamp-3 md:line-clamp-3 ml-[-1px]",
                             theme.textHead
                         )}
                         style={{ wordBreak: 'break-word' }}
@@ -143,14 +143,14 @@ export default function StoryCard({ story, activePersona, layoutId, index = 0 }:
                         <motion.div
                             initial={{ opacity: 0.9 }}
                             whileHover={{ opacity: 1 }}
-                            className="flex-1 overflow-hidden"
+                            className="flex-1 overflow-hidden min-h-0"
                         >
                             <p className={cn(
-                                "text-xs md:text-sm font-medium leading-relaxed border-l-2 border-[#FFD200] pl-3 h-full",
+                                "text-[11px] md:text-sm font-medium leading-relaxed border-l-2 border-[#FFD200] pl-3 h-full",
                                 theme.textSummary
                             )}>
                                 {/* Adaptive line clamp for better fit */}
-                                <span className="line-clamp-4 md:line-clamp-5 lg:line-clamp-6">
+                                <span className="line-clamp-3 md:line-clamp-5 lg:line-clamp-6">
                                     {summary.summary_short}
                                 </span>
                             </p>

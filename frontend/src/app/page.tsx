@@ -154,7 +154,7 @@ export default function Home() {
                             animate={{ width: 320, opacity: 1 }}
                             exit={{ width: 0, opacity: 0 }}
                             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                            className="bg-slate-800 border-r border-white/10 shadow-2xl flex flex-col overflow-hidden whitespace-nowrap z-40"
+                            className="bg-slate-800 border-r border-white/10 shadow-2xl flex flex-col overflow-hidden whitespace-nowrap z-40 absolute h-full md:static md:h-auto"
                         >
                             <div className="h-14 flex-none flex items-center justify-between px-6 border-b border-white/10 min-w-[320px]">
                                 <span className="text-sm font-black tracking-tighter text-white">AI<span className="text-white/40">DAILY</span></span>
@@ -280,12 +280,25 @@ export default function Home() {
                     )}
                 </AnimatePresence>
 
-                {/* MAIN LAYOUT: Pushes with sidebar, Closes on click */}
+                {/* MOBILE BACKDROP OVERLAY */}
+                <AnimatePresence>
+                    {isSidebarOpen && (
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setSidebarOpen(false)}
+                            className="fixed inset-0 z-30 bg-black/60 backdrop-blur-sm md:hidden"
+                        />
+                    )}
+                </AnimatePresence>
+
+                {/* MAIN LAYOUT: Pushes with sidebar only on desktop */}
                 <main
                     onClick={() => isSidebarOpen && setSidebarOpen(false)}
                     className={cn(
                         "flex-1 w-full min-h-0 flex flex-col p-4 gap-4 bg-slate-950 transition-all duration-300",
-                        isSidebarOpen ? "cursor-pointer opacity-80" : ""
+                        isSidebarOpen ? "md:opacity-80" : ""
                     )}
                 >
                     {loading ? (
