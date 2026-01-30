@@ -171,7 +171,7 @@ export default function StoryCard({ story, activePersona, layoutId, index = 0 }:
                 </div>
 
                 {/* Bottom: Action / Tag */}
-                <div className="p-4 relative z-10 flex items-center justify-between mt-auto">
+                <div className="p-4 relative z-10 hidden md:flex items-center justify-between mt-auto">
                     <div className="flex items-center gap-2 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 ease-out text-[#FFD200]">
                         <span className="text-[9px] font-black uppercase tracking-[0.2em]">Read Signal</span>
                         <ArrowRight size={12} className="stroke-[3px]" />
