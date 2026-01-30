@@ -5,7 +5,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Check, Loader2, Mail } from "lucide-react";
+import { Check, Loader2, Mail, Eye, EyeOff } from "lucide-react";
 
 interface AuthModalProps {
     isOpen: boolean;
@@ -22,6 +22,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
     const [successMessage, setSuccessMessage] = useState<string | null>(null);
     const [fullName, setFullName] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -41,6 +42,9 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                 }
                 if (!fullName.trim()) {
                     throw new Error("Full Name is required");
+                }
+                if (password.length < 8) {
+                    throw new Error("Password must be at least 8 characters");
                 }
 
                 const { error } = await signUp(email, password, fullName);
@@ -113,16 +117,28 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                                 className="bg-slate-800 border-slate-700 focus:border-blue-500"
                             />
                         </div>
-                        <div className="space-y-2">
+                        <div className="relative">
                             <Label htmlFor="password">Password</Label>
-                            <Input
-                                id="password"
-                                type="password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                required
-                                className="bg-slate-800 border-slate-700 focus:border-blue-500"
-                            />
+                            <div className="relative">
+                                <Input
+                                    id="password"
+                                    type={showPassword ? "text" : "password"}
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    required
+                                    className="bg-slate-800 border-slate-700 focus:border-blue-500 pr-10"
+                                />
+                                <button
+                                    type="button"
+                                    onClick={() => setShowPassword(!showPassword)}
+                                    className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white"
+                                >
+                                    {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
+                                </button>
+                            </div>
+                            {!isLogin && (
+                                <p className="text-xs text-slate-500 mt-1">Must be at least 8 characters</p>
+                            )}
                         </div>
 
                         {!isLogin && (
@@ -130,7 +146,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                                 <Label htmlFor="confirmPassword">Confirm Password</Label>
                                 <Input
                                     id="confirmPassword"
-                                    type="password"
+                                    type={showPassword ? "text" : "password"}
                                     value={confirmPassword}
                                     onChange={(e) => setConfirmPassword(e.target.value)}
                                     required
@@ -190,6 +206,6 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                     </form>
                 )}
             </DialogContent>
-        </Dialog>
+        </Dialog >
     );
 }
