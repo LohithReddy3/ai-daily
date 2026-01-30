@@ -297,7 +297,7 @@ export default function Home() {
                 <main
                     onClick={() => isSidebarOpen && setSidebarOpen(false)}
                     className={cn(
-                        "flex-1 w-full min-h-0 flex flex-col p-4 gap-4 bg-slate-950 transition-all duration-300",
+                        "flex-1 w-full min-h-0 flex flex-col p-4 gap-4 bg-slate-950 transition-all duration-300 md:overflow-hidden overflow-y-auto",
                         isSidebarOpen ? "md:opacity-80" : ""
                     )}
                 >
@@ -314,8 +314,8 @@ export default function Home() {
                         </div>
                     ) : (
                         <>
-                            {/* TOP ROW: 2 Stories (50% Height) */}
-                            <section className="flex-1 min-h-0 w-full rounded-2xl shadow-2xl border border-white/5 overflow-hidden">
+                            {/* TOP ROW: 2 Stories (Scroll on mobile, 50% on desktop) */}
+                            <section className="h-auto md:flex-1 min-h-[400px] w-full rounded-2xl shadow-2xl border border-white/5 overflow-hidden shrink-0">
                                 <div className="h-full w-full grid grid-cols-1 md:grid-cols-2 bg-slate-900 gap-px">
                                     <AnimatePresence mode="popLayout">
                                         {visibleStories.slice(0, 2).map((story, index) => (
@@ -338,8 +338,8 @@ export default function Home() {
                                 </div>
                             </section>
 
-                            {/* BOTTOM ROW: 3 Stories (50% Height) */}
-                            <section className="flex-1 min-h-0 w-full rounded-2xl shadow-2xl border border-white/5 overflow-hidden">
+                            {/* BOTTOM ROW: 3 Stories (Scroll on mobile, 50% on desktop) */}
+                            <section className="h-auto md:flex-1 min-h-[600px] w-full rounded-2xl shadow-2xl border border-white/5 overflow-hidden shrink-0">
                                 <div className="h-full w-full grid grid-cols-1 md:grid-cols-3 bg-slate-900 gap-px">
                                     <AnimatePresence mode="popLayout">
                                         {visibleStories.slice(2, 5).map((story, index) => (
