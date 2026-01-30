@@ -28,10 +28,17 @@ export default function ProfileModal({ isOpen, onClose }: ProfileModalProps) {
                 {/* Header Profile Section */}
                 <div className="bg-[#002B52] p-8 text-center border-b border-white/10 relative">
                     <div className="absolute top-4 right-4">
-                        <div className="inline-flex items-center rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2.5 py-0.5 text-xs font-semibold text-emerald-400 gap-1.5 transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">
-                            <ShieldCheck size={12} />
-                            Verified Account
-                        </div>
+                        {user.email_confirmed_at ? (
+                            <div className="inline-flex items-center rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2.5 py-0.5 text-xs font-semibold text-emerald-400 gap-1.5">
+                                <ShieldCheck size={12} />
+                                Verified Account
+                            </div>
+                        ) : (
+                            <div className="inline-flex items-center rounded-full border border-yellow-500/20 bg-yellow-500/10 px-2.5 py-0.5 text-xs font-semibold text-yellow-500 gap-1.5">
+                                <ShieldCheck size={12} />
+                                Pending Verification
+                            </div>
+                        )}
                     </div>
 
                     <div className="flex justify-center mb-4 mt-4">
