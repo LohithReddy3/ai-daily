@@ -13,7 +13,7 @@ interface AuthModalProps {
 }
 
 export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
-    const { signInWithPassword, signUp, signInWithGoogle } = useAuth();
+    const { signInWithPassword, signUp, signInWithGoogle, resendVerificationEmail } = useAuth();
     const [isLogin, setIsLogin] = useState(true);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -140,9 +140,36 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                         )}
 
                         {error && (
-                            <div className="text-red-400 text-sm bg-red-950/20 p-3 rounded border border-red-900/50 flex flex-col gap-1">
-                                <span className="font-semibold">Error:</span>
-                                <span>{error}</span>
+                            <div className="text-red-400 text-sm bg-red-950/20 p-3 rounded border border-red-900/50 flex flex-col gap-2">
+                                <div className="flex flex-col gap-1">
+                                    <span className="font-semibold">Error:</span>
+                                    <span>{error}</span>
+                                </div>
+                                {(error.includes("already registered") || error.includes("User already registered")) && !isLogin && (
+                                    <Button
+                                        type="button"
+                                        variant="outline"
+                                        size="sm"
+                                        onClick={async () => {
+                                            setLoading(true);
+                                            // Use local state function not the one from hook inside callback if possible, 
+                                            // actually we destructured it above so use that.
+                                            const { error } = await resendVerificationEmail(email);
+                                            setLoading(false);
+                                            if (!error) {
+                                                setSuccessMessage(`Verification email resent to ${email}. Check your spam folder.`);
+                                                setError(null);
+                                            } else {
+                                                let msg = error.message;
+                                                if (msg.includes("rate limit")) msg = "Please wait a minute before retrying.";
+                                                setError(msg);
+                                            }
+                                        }}
+                                        className="mt-1 border-red-800 text-red-400 hover:bg-red-900/30 hover:text-red-300"
+                                    >
+                                        Resend Verification Email
+                                    </Button>
+                                )}
                             </div>
                         )}
 

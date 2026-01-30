@@ -15,6 +15,7 @@ type AuthContextType = {
     signInWithPassword: (email: string, password: string) => Promise<{ error: any }>;
     signUp: (email: string, password: string, full_name: string) => Promise<{ error: any }>;
     verifyOtp: (email: string, token: string) => Promise<{ error: any; session: Session | null }>;
+    resendVerificationEmail: (email: string) => Promise<{ error: any }>;
     signOut: () => Promise<void>;
     openAuthModal: () => void;
     closeAuthModal: () => void;
@@ -29,6 +30,7 @@ const AuthContext = createContext<AuthContextType>({
     signInWithPassword: async () => ({ error: null }),
     signUp: async () => ({ error: null }),
     verifyOtp: async () => ({ error: null, session: null }),
+    resendVerificationEmail: async () => ({ error: null }),
     signOut: async () => { },
     openAuthModal: () => { alert("DEBUG: Default Context (Not Connected)"); },
     closeAuthModal: () => { },
@@ -128,6 +130,17 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         posthog.reset();
     };
 
+    const resendVerificationEmail = async (email: string) => {
+        const { error } = await supabase.auth.resend({
+            type: 'signup',
+            email: email,
+            options: {
+                emailRedirectTo: `${window.location.origin}/auth/callback`,
+            }
+        });
+        return { error };
+    };
+
     const [isModalOpen, setIsModalOpen] = useState(false);
     const openAuthModal = () => { setIsModalOpen(true); };
     const closeAuthModal = () => { setIsModalOpen(false); };
@@ -136,7 +149,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         <AuthContext.Provider value={{
             user, session, loading,
             signInWithGoogle, signInWithEmail, verifyOtp, signOut,
-            signInWithPassword, signUp,
+            signInWithPassword, signUp, resendVerificationEmail,
             openAuthModal, closeAuthModal
         }}>
             {children}
