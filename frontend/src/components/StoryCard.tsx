@@ -112,8 +112,7 @@ export default function StoryCard({ story, activePersona, layoutId, index = 0 }:
                     theme.hover
                 )}
             >
-                {/* Top: Date & Category Indicator */}
-                <div className="p-4 flex justify-between items-start z-10 w-full mix-blend-plus-lighter">
+                <div className="p-3 md:p-4 flex justify-between items-start z-10 w-full mix-blend-plus-lighter shrink-0">
                     <div className="flex gap-1 opacity-60 group-hover:opacity-100 transition-opacity">
                         <div className="w-1.5 h-1.5 rounded-full bg-[#FFD200] shadow-[0_0_8px_rgba(255,210,0,0.8)]" />
                         <div className="w-1.5 h-1.5 rounded-full bg-[#FFD200]/30" />
@@ -125,11 +124,11 @@ export default function StoryCard({ story, activePersona, layoutId, index = 0 }:
                 </div>
 
                 {/* Middle: HEADLINE & SUMMARY */}
-                <div className="px-4 relative z-10 flex-1 min-h-0 flex flex-col justify-start pt-1 gap-2 overflow-hidden">
+                <div className="px-3 md:px-4 relative z-10 flex-1 min-h-0 flex flex-col justify-start pt-0 gap-2 overflow-hidden">
                     <motion.h2
                         layoutId={`${cardId}-title`}
                         className={cn(
-                            "text-lg sm:text-xl lg:text-3xl font-black leading-[0.95] md:leading-[0.9] font-outfit uppercase tracking-tighter line-clamp-3 md:line-clamp-3 ml-[-1px]",
+                            "text-base md:text-3xl font-bold md:font-black leading-tight md:leading-[0.9] font-outfit uppercase tracking-normal md:tracking-tighter line-clamp-4 md:line-clamp-3 ml-0 md:ml-[-1px]",
                             theme.textHead
                         )}
                         style={{ wordBreak: 'break-word' }}
@@ -141,18 +140,33 @@ export default function StoryCard({ story, activePersona, layoutId, index = 0 }:
                         <motion.div
                             initial={{ opacity: 0.9 }}
                             whileHover={{ opacity: 1 }}
-                            className="flex-1 overflow-hidden min-h-0"
+                            className="flex-1 overflow-hidden min-h-0 hidden md:block"
                         >
                             <p className={cn(
-                                "text-[11px] md:text-sm font-medium leading-relaxed border-l-2 border-[#FFD200] pl-3 h-full",
+                                "text-sm font-medium leading-relaxed border-l-2 border-[#FFD200] pl-3 h-full",
                                 theme.textSummary
                             )}>
                                 {/* Adaptive line clamp for better fit */}
-                                <span className="line-clamp-3 md:line-clamp-5 lg:line-clamp-6">
+                                <span className="line-clamp-5 lg:line-clamp-6">
                                     {summary.summary_short}
                                 </span>
                             </p>
                         </motion.div>
+                    )}
+
+                    {/* Mobile Only Summary - Visible only if title is short enough, or always visible? 
+                        User asked for "Full sentence at least" of the TITLE. 
+                        Let's show summary on mobile too but very small if needed, or just prioritize title. 
+                        Actually, let's keep summary visible on mobile but smaller. 
+                    */}
+                    {hasSummary && (
+                        <div className="md:hidden mt-auto pt-1">
+                            <p className={cn(
+                                "text-[11px] font-medium leading-relaxed text-white/80 line-clamp-3",
+                            )}>
+                                {summary.summary_short}
+                            </p>
+                        </div>
                     )}
                 </div>
 
