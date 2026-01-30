@@ -24,7 +24,8 @@ def start_scheduler():
     scheduler = AsyncIOScheduler()
     # Schedule daily at 6 AM ET (approx 10 AM UTC)
     # For testing, we run every hour or manual trigger
-    scheduler.add_job(full_pipeline, 'cron', hour=10, minute=0) 
+    # Schedule to run every hour to keep feed fresh
+    scheduler.add_job(full_pipeline, 'interval', minutes=60) 
     scheduler.start()
     return scheduler
 
