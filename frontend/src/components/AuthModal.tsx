@@ -26,7 +26,6 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        alert("Debug: Form Submit. isLogin: " + isLogin);
         console.log("Submit", { isLogin });
         setLoading(true);
         setError(null);
@@ -34,8 +33,6 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
 
         try {
             if (isLogin) {
-                alert("Debug: Calling Sign In API");
-                console.log("API Call");
                 const { error } = await signInWithPassword(email, password);
                 if (error) {
                     console.error("AuthModal: Sign In Failed", error); // DEBUG
@@ -198,20 +195,14 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                             </div>
                         )}
 
-                        <div onClick={() => console.log("Wrapper Click")} className="w-full">
-                            <Button
-                                type="submit"
-                                className="w-full bg-blue-600 hover:bg-blue-700 text-white"
-                                disabled={loading}
-                                onClick={() => {
-                                    alert("Debug: Native Button Click. Loading: " + loading);
-                                    console.log("Click");
-                                }}
-                            >
-                                {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                                {isLogin ? "Sign In" : "Sign Up"}
-                            </Button>
-                        </div>
+                        <Button
+                            type="submit"
+                            className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                            disabled={loading}
+                        >
+                            {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                            {isLogin ? "Sign In" : "Sign Up"}
+                        </Button>
 
                         <div className="text-center text-sm">
                             <button

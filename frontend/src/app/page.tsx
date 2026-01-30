@@ -269,13 +269,10 @@ export default function Home() {
                                     </div>
                                 ) : (
                                     <button
-                                        onClick={() => {
-                                            alert("Debug: Sidebar Clicked (page.tsx)");
-                                            openAuthModal();
-                                        }}
+                                        onClick={openAuthModal}
                                         className="w-full py-2 bg-white/5 hover:bg-white/10 rounded border border-white/10 text-xs font-bold uppercase tracking-wider text-white/60"
                                     >
-                                        Sign In (Live)
+                                        Sign In
                                     </button>
                                 )}
                             </div>

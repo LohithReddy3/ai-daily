@@ -71,13 +71,12 @@ export default function Navbar() {
                 ) : (
                     <button
                         onClick={() => {
-                            alert("Debug: Sidebar Clicked (v2)");
                             openAuthModal();
                         }}
                         className="flex items-center gap-3 px-4 py-3 text-blue-400 bg-blue-500/10 border border-blue-500/20 hover:bg-blue-500/20 transition-all w-full rounded-xl"
                     >
                         <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
-                        <span className="text-sm font-bold">Sign In (Debug)</span>
+                        <span className="text-sm font-bold">Sign In</span>
                     </button>
                 )}
             </div>
