@@ -102,12 +102,10 @@ export default function StoryCard({ story, activePersona, layoutId, index = 0 }:
             {/* GRID CELL - DEEP NAVY */}
             <motion.div
                 layoutId={cardId}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.05 }}
                 onClick={handleExpand}
                 className={cn(
-                    "relative group cursor-pointer w-full h-full overflow-hidden hover:z-10",
+                    "relative group cursor-pointer w-full h-full min-h-[250px] md:min-h-0 overflow-hidden hover:z-10 text-white",
                     "border-r border-b border-[#FFD200]/20 last:border-0 transition-colors duration-300",
                     "flex flex-col justify-between",
                     theme.bg,
