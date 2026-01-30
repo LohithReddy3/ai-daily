@@ -198,18 +198,20 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                             </div>
                         )}
 
-                        <Button
-                            type="submit"
-                            className="w-full bg-blue-600 hover:bg-blue-700 text-white"
-                            disabled={loading}
-                            onClick={() => {
-                                alert("Debug: Native Button Click. Loading: " + loading);
-                                console.log("Click");
-                            }}
-                        >
-                            {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                            {isLogin ? "Sign In" : "Sign Up"}
-                        </Button>
+                        <div onClick={() => console.log("Wrapper Click")} className="w-full">
+                            <Button
+                                type="submit"
+                                className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                                disabled={loading}
+                                onClick={() => {
+                                    alert("Debug: Native Button Click. Loading: " + loading);
+                                    console.log("Click");
+                                }}
+                            >
+                                {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                                {isLogin ? "Sign In" : "Sign Up"}
+                            </Button>
+                        </div>
 
                         <div className="text-center text-sm">
                             <button
