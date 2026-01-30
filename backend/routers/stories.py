@@ -14,6 +14,28 @@ router = APIRouter(
     tags=["stories"],
 )
 
+@router.get("/debug/status")
+async def debug_status(db: AsyncSession = Depends(get_db)):
+    """Debug endpoint to check DB time and latest stories."""
+    # 1. Check DB Time
+    time_result = await db.execute(select(func.now()))
+    db_time = time_result.scalar()
+    
+    # 2. Check Latest Stories
+    stmt = (
+        select(Story.canonical_title, Story.created_at)
+        .order_by(Story.created_at.desc())
+        .limit(5)
+    )
+    result = await db.execute(stmt)
+    stories = [{"title": r[0], "created_at": r[1]} for r in result.all()]
+    
+    return {
+        "server_time_utc": datetime.utcnow(),
+        "db_time": db_time,
+        "latest_stories": stories
+    }
+
 
 
 from ..dependencies import get_optional_current_user
