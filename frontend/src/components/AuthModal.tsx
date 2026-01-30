@@ -26,16 +26,23 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        console.log("AuthModal: Handle Submit Triggered", { isLogin, email }); // DEBUG
         setLoading(true);
         setError(null);
         setSuccessMessage(null);
 
         try {
             if (isLogin) {
+                console.log("AuthModal: Attempting Sign In..."); // DEBUG
                 const { error } = await signInWithPassword(email, password);
-                if (error) throw error;
+                if (error) {
+                    console.error("AuthModal: Sign In Failed", error); // DEBUG
+                    throw error;
+                }
+                console.log("AuthModal: Sign In Successful"); // DEBUG
                 onClose();
             } else {
+                console.log("AuthModal: Attempting Sign Up..."); // DEBUG
                 // Validation for Sign Up
                 if (password !== confirmPassword) {
                     throw new Error("Passwords do not match");
