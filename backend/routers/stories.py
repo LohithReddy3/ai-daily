@@ -58,8 +58,8 @@ async def get_stories(
     stmt = (
         stmt.group_by(Story.id)
         .options(selectinload(Story.items), selectinload(Story.summaries))
-        .order_by(func.count(Item.id).desc(), Story.created_at.desc())
-        .limit(10 if timeframe == "today" else 30)
+        .order_by(Story.created_at.desc(), func.count(Item.id).desc())
+        .limit(20 if timeframe == "today" else 30)
     )
     
     result = await db.execute(stmt)
