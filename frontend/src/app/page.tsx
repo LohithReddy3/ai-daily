@@ -10,7 +10,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '@/context/AuthContext';
 
 export default function Home() {
-    const { user, signOut } = useAuth(); // Destructure signOut
+    const { user, signOut, openAuthModal } = useAuth(); // Destructure signOut
     const [stories, setStories] = useState<Story[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
@@ -268,8 +268,14 @@ export default function Home() {
                                         </div>
                                     </div>
                                 ) : (
-                                    <button className="w-full py-2 bg-white/5 hover:bg-white/10 rounded border border-white/10 text-xs font-bold uppercase tracking-wider text-white/60">
-                                        Sign In
+                                    <button
+                                        onClick={() => {
+                                            alert("Debug: Sidebar Clicked (page.tsx)");
+                                            openAuthModal();
+                                        }}
+                                        className="w-full py-2 bg-white/5 hover:bg-white/10 rounded border border-white/10 text-xs font-bold uppercase tracking-wider text-white/60"
+                                    >
+                                        Sign In (Live)
                                     </button>
                                 )}
                             </div>
