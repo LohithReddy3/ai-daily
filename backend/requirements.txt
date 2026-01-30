@@ -13,3 +13,5 @@ google-generativeai
 apscheduler
 beautifulsoup4
 httpx
+aiosqlite
+psycopg2-binary
