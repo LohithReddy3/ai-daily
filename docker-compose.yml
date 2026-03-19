@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    image: ai-daily-backend:latest
+    container_name: ai_daily_backend
+    env_file:
+      - .env
+    restart: unless-stopped
+    volumes:
+      # Map the local SQLite DB into the container so data persists and we have access to it locally if we are using sqlite fallback
+      - ./ai_daily.db:/app/ai_daily.db
+      - ./ai_daily.db-shm:/app/ai_daily.db-shm
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        # Default to localhost for sharing and local evaluation
+        # For actual AWS deployment, these would need to be passed as build args: 
+        # e.g., docker-compose build --build-arg NEXT_PUBLIC_API_URL=http://<EC2_IP>:8000 frontend
+        - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+        - NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL}
+        - NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}
+    ports:
+      - "3000:3000"
+    image: ai-daily-frontend:latest
+    container_name: ai_daily_frontend
+    environment:
+      # Set runtime URL
+      - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+    env_file:
+      - .env
+    depends_on:
+      - backend
+    restart: unless-stopped

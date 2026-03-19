@@ -1,0 +1,8 @@
+__pycache__
+.git
+.venv
+venv
+.env
+sql_app.db
+ai_daily.db
+ai_daily.db-shm

@@ -4,10 +4,11 @@ from sqlalchemy.orm import sessionmaker
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(override=True)
 
 # Default to sqlite for local dev if no env var, but plan for Postgres
 DATABASE_URL = os.getenv("DATABASE_URL")
+# DATABASE_URL = "sqlite+aiosqlite:///./ai_daily.db" # Force SQLite for local dev consistency
 
 if not DATABASE_URL:
     print("⚠️ WARNING: DATABASE_URL not found, using SQLite fallback.")
@@ -35,8 +36,8 @@ elif DATABASE_URL and DATABASE_URL.startswith("postgresql://") and "asyncpg" not
 
 # Fallback for local testing without docker
 if "sqlite" in DATABASE_URL:
-     engine = create_async_engine(
-        DATABASE_URL, connect_args={"check_same_thread": False}
+    engine = create_async_engine(
+        DATABASE_URL, connect_args={"check_same_thread": False, "timeout": 30}
     )
 else:
     # Production (Postgres via Supabase/PgBouncer)
@@ -57,6 +58,10 @@ SessionLocal = sessionmaker(
 )
 
 Base = declarative_base()
+
+print(f"DEBUG: Current CWD: {os.getcwd()}")
+print(f"DEBUG: Checking .env: {os.path.exists('.env')}")
+print(f"DEBUG: Engine URL: {engine.url}")
 
 async def get_db():
     async with SessionLocal() as session:

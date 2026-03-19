@@ -15,3 +15,6 @@ beautifulsoup4
 httpx
 aiosqlite
 psycopg2-binary
+readability-lxml
+lxml
+email-validator

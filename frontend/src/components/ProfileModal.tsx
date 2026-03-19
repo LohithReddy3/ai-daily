@@ -24,17 +24,17 @@ export default function ProfileModal({ isOpen, onClose }: ProfileModalProps) {
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
-            <DialogContent className="sm:max-w-md bg-[#001D38] text-white border-white/10 p-0 overflow-hidden gap-0">
+            <DialogContent className="sm:max-w-md bg-white text-black border-gray-200 p-0 overflow-hidden gap-0 shadow-xl">
                 {/* Header Profile Section */}
-                <div className="bg-[#002B52] p-8 text-center border-b border-white/10 relative">
+                <div className="bg-gray-50 p-8 text-center border-b border-gray-200 relative">
                     <div className="absolute top-4 right-4">
                         {user.email_confirmed_at ? (
-                            <div className="inline-flex items-center rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2.5 py-0.5 text-xs font-semibold text-emerald-400 gap-1.5">
+                            <div className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-0.5 text-xs font-semibold text-emerald-700 gap-1.5">
                                 <ShieldCheck size={12} />
                                 Verified Account
                             </div>
                         ) : (
-                            <div className="inline-flex items-center rounded-full border border-yellow-500/20 bg-yellow-500/10 px-2.5 py-0.5 text-xs font-semibold text-yellow-500 gap-1.5">
+                            <div className="inline-flex items-center rounded-full border border-yellow-200 bg-yellow-50 px-2.5 py-0.5 text-xs font-semibold text-yellow-700 gap-1.5">
                                 <ShieldCheck size={12} />
                                 Pending Verification
                             </div>
@@ -42,45 +42,45 @@ export default function ProfileModal({ isOpen, onClose }: ProfileModalProps) {
                     </div>
 
                     <div className="flex justify-center mb-4 mt-4">
-                        <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#FFD200] to-orange-500 p-[2px]">
-                            <div className="w-full h-full rounded-full bg-[#002B52] flex items-center justify-center border-4 border-[#002B52]">
-                                <span className="text-3xl font-bold font-outfit text-[#FFD200]">
+                        <div className="w-24 h-24 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 p-[2px]">
+                            <div className="w-full h-full rounded-full bg-white flex items-center justify-center border-4 border-white">
+                                <span className="text-3xl font-bold font-outfit text-gray-900">
                                     {initials}
                                 </span>
                             </div>
                         </div>
                     </div>
 
-                    <h2 className="text-2xl font-bold font-outfit text-white mb-1">
+                    <h2 className="text-2xl font-bold font-outfit text-black mb-1">
                         {user.user_metadata?.full_name || "Daily Reader"}
                     </h2>
-                    <p className="text-slate-400 font-mono text-xs">
+                    <p className="text-gray-500 font-mono text-xs">
                         {user.email}
                     </p>
                 </div>
 
                 {/* Details Section */}
-                <div className="p-6 space-y-6">
+                <div className="p-6 space-y-6 bg-white">
                     <div className="space-y-4">
-                        <div className="bg-white/5 rounded-xl p-4 flex items-center gap-4">
-                            <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400">
+                        <div className="bg-gray-50 rounded-xl p-4 flex items-center gap-4 border border-gray-100">
+                            <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
                                 <UserIcon size={20} />
                             </div>
                             <div>
-                                <p className="text-xs text-slate-400 uppercase tracking-wider font-bold">Member Since</p>
-                                <p className="text-sm font-medium">
+                                <p className="text-xs text-gray-500 uppercase tracking-wider font-bold">Member Since</p>
+                                <p className="text-sm font-medium text-black">
                                     {new Date(user.created_at).toLocaleDateString(undefined, { month: 'long', year: 'numeric' })}
                                 </p>
                             </div>
                         </div>
 
-                        <div className="bg-white/5 rounded-xl p-4 flex items-center gap-4 opacity-50 cursor-not-allowed">
-                            <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400">
+                        <div className="bg-gray-50 rounded-xl p-4 flex items-center gap-4 opacity-70 cursor-not-allowed border border-gray-100">
+                            <div className="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center text-purple-600">
                                 <CheckCircle2 size={20} />
                             </div>
                             <div>
-                                <p className="text-xs text-slate-400 uppercase tracking-wider font-bold">Subscription</p>
-                                <p className="text-sm font-medium">Free Plan</p>
+                                <p className="text-xs text-gray-500 uppercase tracking-wider font-bold">Subscription</p>
+                                <p className="text-sm font-medium text-black">Free Plan</p>
                             </div>
                         </div>
                     </div>
@@ -88,7 +88,7 @@ export default function ProfileModal({ isOpen, onClose }: ProfileModalProps) {
                     <div className="pt-2">
                         <Button
                             variant="destructive"
-                            className="w-full bg-red-950/50 hover:bg-red-900/80 text-red-200 border-red-900/30 border h-12 gap-2"
+                            className="w-full bg-red-50 hover:bg-red-100 text-red-700 border-red-200 border h-12 gap-2"
                             onClick={handleSignOut}
                         >
                             <LogOut size={16} />

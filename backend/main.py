@@ -2,8 +2,9 @@ from fastapi import FastAPI
 from contextlib import asynccontextmanager
 from fastapi.middleware.cors import CORSMiddleware
 from .database import engine, Base
-from .routers import stories, auth
+from .routers import stories, admin, brief, trends
 from .scheduler import start_scheduler
+import os
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -18,54 +19,39 @@ async def lifespan(app: FastAPI):
     # Shutdown
     scheduler.shutdown()
 
-app = FastAPI(title="AI Daily API", lifespan=lifespan)
-
-import os
+app = FastAPI(title="AI Daily API V2", lifespan=lifespan)
 
 # CORS
 origins = [
     "http://localhost:3000",
     "http://localhost:3001",
+    "http://127.0.0.1:3000",
+    "http://0.0.0.0:3000",
+    "http://[::1]:3000",
 ]
 
 frontend_url = os.getenv("FRONTEND_URL")
 if frontend_url:
     origins.append(frontend_url)
 
-# Dynamic CORS configuration
-# If we have a specific FRONTEND_URL, we use strict origins and allow credentials.
-# If not (e.g. initial deploy), we allow all origins ("*") but MUST disable credentials to be valid.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins if frontend_url else ["*"],
-    allow_credentials=True if frontend_url else False,
+    allow_origins=origins,
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+# Routers
 app.include_router(stories.router)
-app.include_router(auth.router)
+app.include_router(admin.router)
+app.include_router(brief.router)
+app.include_router(trends.router)
 
 @app.get("/")
 def read_root():
-    return {"message": "AI Daily Intelligence API"}
+    return {"message": "AI Daily Intelligence API V2 - Operational"}
 
 @app.get("/health")
 def health_check():
-    return {"status": "ok"}
-
-# Temporary Manual Trigger
-from fastapi import BackgroundTasks
-from .scheduler import full_pipeline
-
-@app.get("/run-pipeline")
-async def manual_pipeline(background_tasks: BackgroundTasks):
-    background_tasks.add_task(full_pipeline)
-    return {"message": "Pipeline triggered in background"}
-
-# Manual Seeding Endpoint
-from .scripts.seed_sources import seed as run_seed
-@app.get("/seed-sources")
-async def seed_sources_endpoint():
-    await run_seed()
-    return {"message": "Sources seeded successfully"}
+    return {"status": "ok", "pipeline_active": True}

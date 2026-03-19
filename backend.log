@@ -1,0 +1,1197 @@
+INFO:     Will watch for changes in these directories: ['/Users/lohithreddymaddula/Documents/AI Daily']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [27749] using WatchFiles
+/Users/lohithreddymaddula/Documents/AI Daily/backend/services/embeddings.py:1: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+INFO:     Started server process [27802]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+✅ INFO: DATABASE_URL found. Connecting to Postgres...
+DEBUG: Current CWD: /Users/lohithreddymaddula/Documents/AI Daily
+DEBUG: Checking .env: True
+DEBUG: Engine URL: sqlite+aiosqlite:///./ai_daily.db
+INFO:     127.0.0.1:54954 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54972 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54989 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54996 - "GET /stories/?timeframe=7d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55008 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55008 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55008 - "GET /stories/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55008 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55009 - "GET /stories/?timeframe=today&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55012 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55012 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55014 - "GET /brief/today HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:55014 - "GET /brief/today HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:55014 - "GET /brief/today HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:55014 - "GET /brief/today?persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55016 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55031 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55033 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55021 - "GET /stories/?limit=1000 HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:55021 - "GET /stories/?limit=200 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55038 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55047 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55049 - "GET /brief/today?persona=builders HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'backend/scripts/debug_stories.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [27802]
+WARNING:  WatchFiles detected changes in 'backend/scripts/debug_stories.py'. Reloading...
+/Users/lohithreddymaddula/Documents/AI Daily/backend/services/embeddings.py:1: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+INFO:     Started server process [28453]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+/Users/lohithreddymaddula/Documents/AI Daily/backend/services/embeddings.py:1: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+INFO:     Started server process [28461]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'backend/services/llm.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [28461]
+/Users/lohithreddymaddula/Documents/AI Daily/backend/services/embeddings.py:1: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+INFO:     Started server process [28684]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+✅ INFO: DATABASE_URL found. Connecting to Postgres...
+DEBUG: Current CWD: /Users/lohithreddymaddula/Documents/AI Daily
+DEBUG: Checking .env: True
+DEBUG: Engine URL: sqlite+aiosqlite:///./ai_daily.db
+INFO:     127.0.0.1:55152 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55152 - "GET /stories/?timeframe=7d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55152 - "GET /stories/?timeframe=30d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55152 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55162 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55159 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55162 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55162 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55159 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55164 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Open+Source HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55164 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55164 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Markets%2CStrategy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55164 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55164 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Enterprise%2CIndustry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55164 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Startups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55164 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Compute HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55164 - "GET /stories/?timeframe=today&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55164 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=AGI+%26+Future HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55164 - "GET /stories/?timeframe=today&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55164 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=Ethics%2CJobs+%26+Society%2CPolicy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55164 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=Demos+%26+Creativity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55164 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=Ethics%2CJobs+%26+Society%2CPolicy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55164 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=AGI+%26+Future HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55164 - "GET /stories/?timeframe=today&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55164 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55164 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55164 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55164 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55164 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55177 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55177 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55177 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55177 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55177 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Open+Source HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55177 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55177 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Markets%2CStrategy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55177 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Enterprise%2CIndustry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55177 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Compute HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55177 - "GET /stories/?timeframe=today&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55177 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=AGI+%26+Future HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55177 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=Ethics%2CJobs+%26+Society%2CPolicy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55177 - "GET /stories/?timeframe=30d&limit=100&persona=explorers&category=Ethics%2CJobs+%26+Society%2CPolicy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55177 - "GET /stories/?timeframe=30d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55177 - "GET /stories/?timeframe=30d&limit=100&persona=builders&category=Open+Source HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55177 - "GET /stories/?timeframe=30d&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55177 - "GET /stories/?timeframe=30d&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55181 - "GET /stories/?timeframe=30d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55225 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55235 - "GET /stories/?timeframe=7d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55243 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55250 - "GET /stories/?timeframe=today&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55253 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55255 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55257 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55259 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55262 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55267 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55270 - "GET /stories/?timeframe=7d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55272 - "GET /stories/?timeframe=30d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55294 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55306 - "GET /stories/?timeframe=today&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=today&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=7d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=30d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=30d&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=30d&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=30d&limit=100&persona=builders&category=Open+Source HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=30d&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Markets%2CStrategy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Enterprise%2CIndustry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Startups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Compute HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=today&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=AGI+%26+Future HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=Ethics%2CJobs+%26+Society%2CPolicy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=Demos+%26+Creativity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Open+Source HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=30d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=30d&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=30d&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=30d&limit=100&persona=builders&category=Open+Source HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=30d&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=30d&limit=100&persona=executors&category=Markets%2CStrategy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=30d&limit=100&persona=executors&category=Enterprise%2CIndustry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=30d&limit=100&persona=executors&category=Startups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=30d&limit=100&persona=executors&category=Compute HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=30d&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=30d&limit=100&persona=explorers&category=AGI+%26+Future HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=30d&limit=100&persona=explorers&category=Ethics%2CJobs+%26+Society%2CPolicy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=30d&limit=100&persona=explorers&category=Demos+%26+Creativity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /stories/?timeframe=30d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55335 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55335 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55335 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55335 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55335 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55335 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55335 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55335 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Open+Source HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55335 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55335 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Open+Source HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55340 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55340 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Markets%2CStrategy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55340 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55342 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55342 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55345 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55347 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55347 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55347 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55347 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'backend/services/llm.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [28684]
+/Users/lohithreddymaddula/Documents/AI Daily/backend/services/embeddings.py:1: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+INFO:     Started server process [34846]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+✅ INFO: DATABASE_URL found. Connecting to Postgres...
+DEBUG: Current CWD: /Users/lohithreddymaddula/Documents/AI Daily
+DEBUG: Checking .env: True
+DEBUG: Engine URL: sqlite+aiosqlite:///./ai_daily.db
+INFO:     127.0.0.1:55605 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Open+Source HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Open+Source HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Markets%2CStrategy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Enterprise%2CIndustry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Startups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Compute HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Startups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Compute HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Startups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /stories/?timeframe=today&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=AGI+%26+Future HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /stories/?timeframe=today&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=AGI+%26+Future HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=Ethics%2CJobs+%26+Society%2CPolicy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=Demos+%26+Creativity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=Ethics%2CJobs+%26+Society%2CPolicy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=AGI+%26+Future HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /stories/?timeframe=today&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55614 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55614 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55614 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55617 - "GET /stories/de08c2f7-af13-4396-beae-779e7a430326 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55620 - "GET /stories/de08c2f7-af13-4396-beae-779e7a430326 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55620 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55622 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55624 - "GET /stories/f9ac8d87-3ea9-4dcb-a5a1-04a9040b9970 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55625 - "GET /stories/f9ac8d87-3ea9-4dcb-a5a1-04a9040b9970 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55625 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55626 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55626 - "GET /stories/5e52300c-e7b8-49b7-8f96-8c987c23b90b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55629 - "GET /stories/5e52300c-e7b8-49b7-8f96-8c987c23b90b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55626 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55629 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55629 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55629 - "GET /stories/5e52300c-e7b8-49b7-8f96-8c987c23b90b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55634 - "GET /stories/5e52300c-e7b8-49b7-8f96-8c987c23b90b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55629 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55634 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-19 22:16:06 EST)" was missed by 0:13:22.058595
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-19 22:31:06 EST)" was missed by 0:13:45.985042
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-19 22:46:06 EST)" was missed by 0:14:16.837407
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-19 23:46:06 EST)" was missed by 0:14:40.161653
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-19 23:01:06 EST)" was missed by 0:14:40.515977
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 10:01:06 EST)" was missed by 0:06:44.781514
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-20 10:46:06 EST)" was missed by 0:06:44.830487
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 10:46:06 EST)" was missed by 0:02:10.206673
+INFO:     127.0.0.1:56069 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56078 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56074 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56078 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56078 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Open+Source HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56078 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56074 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56074 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56074 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56074 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Startups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56074 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Compute HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56074 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Enterprise%2CIndustry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56074 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Compute HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56074 - "GET /stories/?timeframe=today&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56074 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=Ethics%2CJobs+%26+Society%2CPolicy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56074 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=Demos+%26+Creativity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56074 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=Ethics%2CJobs+%26+Society%2CPolicy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56074 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=Demos+%26+Creativity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56074 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=Ethics%2CJobs+%26+Society%2CPolicy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56074 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=AGI+%26+Future HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56074 - "GET /stories/?timeframe=today&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56074 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+LLM Call Error (attempt 1): 429 Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 12:31:06 EST)" was missed by 0:07:39.721870
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 12:46:06 EST)" was missed by 0:08:13.414524
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-20 13:46:06 EST)" was missed by 0:09:02.709195
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 13:01:06 EST)" was missed by 0:09:02.709760
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 13:16:06 EST)" was missed by 0:09:27.902255
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 13:31:06 EST)" was missed by 0:09:51.059305
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 13:46:06 EST)" was missed by 0:10:13.627270
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-20 14:46:06 EST)" was missed by 0:10:39.229032
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 14:01:06 EST)" was missed by 0:10:39.229411
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 14:16:06 EST)" was missed by 0:08:23.476628
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 14:31:06 EST)" was missed by 0:08:45.849623
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 14:46:06 EST)" was missed by 0:09:08.685263
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-20 15:46:06 EST)" was missed by 0:09:31.679320
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 15:01:06 EST)" was missed by 0:09:31.680030
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 15:16:06 EST)" was missed by 0:04:14.507967
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 16:16:06 EST)" was missed by 0:10:36.806675
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-20 16:46:06 EST)" was missed by 0:25:36.830801
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 17:16:06 EST)" was missed by 0:11:43.666887
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-20 17:46:06 EST)" was missed by 0:26:43.693046
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 18:16:06 EST)" was missed by 0:04:53.772447
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-20 18:46:06 EST)" was missed by 0:19:53.994809
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 19:01:06 EST)" was missed by 0:05:53.670233
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-20 19:46:06 EST)" was missed by 0:05:53.696284
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 19:16:06 EST)" was missed by 0:13:55.377352
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 20:31:06 EST)" was missed by 0:00:01.509023
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-20 20:46:06 EST)" was missed by 0:30:01.527636
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 21:31:06 EST)" was missed by 0:01:07.795123
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-20 21:46:06 EST)" was missed by 0:31:07.830820
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 22:31:06 EST)" was missed by 0:02:14.751514
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-20 22:46:06 EST)" was missed by 0:32:14.849436
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-20 23:31:06 EST)" was missed by 0:03:20.752115
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-20 23:46:06 EST)" was missed by 0:33:20.764146
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 00:16:06 EST)" was missed by 0:08:44.028988
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-21 00:46:06 EST)" was missed by 0:23:44.085153
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 00:31:06 EST)" was missed by 0:04:26.790359
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 01:31:06 EST)" was missed by 0:05:33.851461
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-21 01:46:06 EST)" was missed by 0:35:34.112320
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 02:31:06 EST)" was missed by 0:03:00.765005
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-21 02:46:06 EST)" was missed by 0:33:00.793399
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 06:31:06 EST)" was missed by 0:01:22.875460
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-21 06:46:06 EST)" was missed by 0:31:23.227253
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 08:31:06 EST)" was missed by 0:02:28.053546
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-21 08:46:06 EST)" was missed by 0:32:28.075891
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 08:46:06 EST)" was missed by 0:04:08.893634
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-21 09:46:06 EST)" was missed by 0:33:29.857477
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 09:31:06 EST)" was missed by 0:03:30.349365
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 10:31:06 EST)" was missed by 0:04:31.824517
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-21 10:46:06 EST)" was missed by 0:34:31.825379
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 10:46:06 EST)" was missed by 0:01:02.774839
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-21 11:46:06 EST)" was missed by 0:35:32.770067
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 11:31:06 EST)" was missed by 0:05:33.118902
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 12:16:06 EST)" was missed by 0:07:21.846574
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-21 12:46:06 EST)" was missed by 0:22:22.179187
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 12:31:06 EST)" was missed by 0:06:33.896611
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 13:16:06 EST)" was missed by 0:09:29.936137
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-21 13:46:06 EST)" was missed by 0:24:29.936842
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 13:31:06 EST)" was missed by 0:07:40.616174
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 14:31:06 EST)" was missed by 0:08:46.904958
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-21 14:46:06 EST)" was missed by 0:38:46.931946
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 15:31:06 EST)" was missed by 0:09:53.028543
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-21 15:46:06 EST)" was missed by 0:39:53.201505
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 16:31:06 EST)" was missed by 0:10:59.915975
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-21 16:46:06 EST)" was missed by 0:40:59.930122
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 17:31:06 EST)" was missed by 0:12:06.939369
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-21 17:46:06 EST)" was missed by 0:42:07.157500
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 18:31:06 EST)" was missed by 0:13:12.931464
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-21 18:46:06 EST)" was missed by 0:43:12.944535
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 18:46:06 EST)" was missed by 0:14:07.877404
+Execution of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 19:01:06 EST)" skipped: maximum number of running instances reached (1)
+Fetch error https://blog.allenai.org/feed: 
+Fetch error https://simonwillison.net/atom/entries/: [Errno 8] nodename nor servname provided, or not known
+Execution of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-21 19:46:06 EST)" skipped: maximum number of running instances reached (1)
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 20:46:06 EST)" was missed by 0:00:27.121721
+Execution of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-21 20:46:06 EST)" skipped: maximum number of running instances reached (1)
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 21:46:06 EST)" was missed by 0:01:37.565954
+Execution of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-21 21:46:06 EST)" skipped: maximum number of running instances reached (1)
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 22:46:06 EST)" was missed by 0:02:40.637798
+LLM Call Error (attempt 1): 504 Deadline Exceeded
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-21 23:46:06 EST)" was missed by 0:48:47.222420
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-21 23:46:06 EST)" was missed by 0:03:47.340077
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-22 00:46:06 EST)" was missed by 0:49:53.546333
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-22 00:46:06 EST)" was missed by 0:04:53.869701
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-22 01:46:06 EST)" was missed by 0:50:59.143989
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-22 01:46:06 EST)" was missed by 0:05:59.165328
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-22 03:46:06 EST)" was missed by 0:12:15.297857
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-22 03:01:06 EST)" was missed by 0:12:15.323112
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-22 05:31:06 EST)" was missed by 0:11:59.360718
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-22 05:46:06 EST)" was missed by 0:41:59.390624
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-22 07:31:06 EST)" was missed by 0:13:05.366812
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-22 07:46:06 EST)" was missed by 0:43:05.384755
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-22 08:31:06 EST)" was missed by 0:14:11.450209
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-22 08:46:06 EST)" was missed by 0:44:11.844991
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-22 08:46:06 EST)" was missed by 0:09:35.321442
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-22 09:46:06 EST)" was missed by 0:45:12.687161
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-22 09:46:06 EST)" was missed by 0:00:12.687577
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-22 10:46:06 EST)" was missed by 0:46:14.650941
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-22 10:46:06 EST)" was missed by 0:01:14.653278
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-22 11:46:06 EST)" was missed by 0:25:17.701142
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-22 11:16:06 EST)" was missed by 0:10:17.701898
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-22 11:46:06 EST)" was missed by 0:02:15.355343
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-22 12:46:06 EST)" was missed by 0:48:15.709691
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-22 12:46:06 EST)" was missed by 0:03:15.709979
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-22 13:46:06 EST)" was missed by 0:49:16.548069
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-22 13:46:06 EST)" was missed by 0:04:16.548214
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-22 14:46:06 EST)" was missed by 0:50:18.259340
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-22 14:46:06 EST)" was missed by 0:05:18.605659
+Run time of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-22 15:46:06 EST)" was missed by 0:51:18.411551
+Run time of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-22 15:46:06 EST)" was missed by 0:06:18.433989
+INFO:     127.0.0.1:58358 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58358 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58359 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58365 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58436 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58443 - "GET /stories/?timeframe=7d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58446 - "GET /stories/?timeframe=30d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58450 - "GET /stories/?timeframe=30d&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58452 - "GET /stories/?timeframe=30d&limit=100&persona=executors&category=Compute HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58454 - "GET /stories/?timeframe=30d&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58460 - "GET /stories/?timeframe=30d&limit=100&persona=explorers&category=Demos+%26+Creativity HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'backend/scheduler.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [34846]
+/Users/lohithreddymaddula/Documents/AI Daily/backend/services/embeddings.py:1: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+INFO:     Started server process [40630]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+✅ INFO: DATABASE_URL found. Connecting to Postgres...
+DEBUG: Current CWD: /Users/lohithreddymaddula/Documents/AI Daily
+DEBUG: Checking .env: True
+DEBUG: Engine URL: sqlite+aiosqlite:///./ai_daily.db
+INFO:     127.0.0.1:58484 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58483 - "GET /stories/?timeframe=30d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58486 - "GET /stories/?timeframe=7d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58486 - "GET /stories/?timeframe=30d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58486 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58489 - "GET /stories/?timeframe=7d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58489 - "GET /stories/?timeframe=30d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58489 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58495 - "GET /stories/cce93d27-098f-4644-a065-09b5748415a3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58498 - "GET /stories/cce93d27-098f-4644-a065-09b5748415a3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58503 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58504 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58504 - "GET /stories/3b1c1053-34d0-468c-bf7f-8fdb3db1d54e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58506 - "GET /stories/3b1c1053-34d0-468c-bf7f-8fdb3db1d54e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58504 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58506 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58511 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58511 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58511 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Open+Source HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58511 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58511 - "GET /stories/cce93d27-098f-4644-a065-09b5748415a3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58512 - "GET /stories/cce93d27-098f-4644-a065-09b5748415a3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58525 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58526 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58526 - "GET /stories/?timeframe=30d&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58526 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58526 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58528 - "GET /trends/?days=90 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58529 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58533 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'backend/services/llm.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [40630]
+/Users/lohithreddymaddula/Documents/AI Daily/backend/services/embeddings.py:1: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+INFO:     Started server process [40691]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'backend/services/llm.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [40691]
+/Users/lohithreddymaddula/Documents/AI Daily/backend/services/embeddings.py:1: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+INFO:     Started server process [40704]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+✅ INFO: DATABASE_URL found. Connecting to Postgres...
+DEBUG: Current CWD: /Users/lohithreddymaddula/Documents/AI Daily
+DEBUG: Checking .env: True
+DEBUG: Engine URL: sqlite+aiosqlite:///./ai_daily.db
+INFO:     127.0.0.1:58586 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58592 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58595 - "GET /stories/?timeframe=today&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58598 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58602 - "GET /stories/?timeframe=today&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58611 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58621 - "GET /stories/cce93d27-098f-4644-a065-09b5748415a3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58625 - "GET /stories/cce93d27-098f-4644-a065-09b5748415a3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58659 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58660 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58660 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58660 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Open+Source HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58660 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58660 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58660 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58660 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58660 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58660 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58663 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58663 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58663 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Open+Source HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58663 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58668 - "GET /stories/?timeframe=7d&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58668 - "GET /stories/?timeframe=30d&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58668 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58670 - "GET /stories/876e60bd-7c43-4a75-b1c9-9d193f0bb7f1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58671 - "GET /stories/876e60bd-7c43-4a75-b1c9-9d193f0bb7f1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58680 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58681 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58684 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Markets%2CStrategy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58684 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Enterprise%2CIndustry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58684 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Startups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58684 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Compute HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58684 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Startups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58684 - "GET /stories/?timeframe=today&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58684 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=AGI+%26+Future HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58684 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=Ethics%2CJobs+%26+Society%2CPolicy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58684 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=Demos+%26+Creativity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58684 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58685 - "GET /stories/?timeframe=30d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58685 - "GET /stories/?timeframe=30d&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58688 - "GET /stories/?timeframe=30d&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58690 - "GET /stories/?timeframe=30d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58694 - "GET /stories/?timeframe=30d&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58694 - "GET /stories/?timeframe=30d&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58696 - "GET /stories/?timeframe=30d&limit=100&persona=explorers&category=Ethics%2CJobs+%26+Society%2CPolicy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58696 - "GET /stories/?timeframe=30d&limit=100&persona=explorers&category=AGI+%26+Future HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58696 - "GET /stories/?timeframe=30d&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58696 - "GET /stories/?timeframe=30d&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58696 - "GET /stories/?timeframe=30d&limit=100&persona=executors&category=Markets%2CStrategy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58696 - "GET /stories/?timeframe=30d&limit=100&persona=executors&category=Enterprise%2CIndustry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58696 - "GET /stories/?timeframe=30d&limit=100&persona=executors&category=Startups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58696 - "GET /stories/?timeframe=30d&limit=100&persona=executors&category=Compute HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58696 - "GET /stories/?timeframe=30d&limit=100&persona=executors&category=Startups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58696 - "GET /stories/?timeframe=30d&limit=100&persona=executors&category=Enterprise%2CIndustry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58698 - "GET /stories/?timeframe=30d&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58696 - "GET /stories/?timeframe=30d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58696 - "GET /stories/?timeframe=30d&limit=100&persona=builders&category=Open+Source HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58696 - "GET /stories/?timeframe=30d&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58696 - "GET /stories/?timeframe=30d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58700 - "GET /stories/?timeframe=30d&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58706 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58708 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58708 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58707 - "GET /trends/?days=90 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58711 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58715 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58714 - "GET /stories/?timeframe=30d&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58717 - "GET /stories/?timeframe=7d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58717 - "GET /stories/?timeframe=30d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58717 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58720 - "GET /stories/?timeframe=7d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58720 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58722 - "GET /stories/?timeframe=7d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58722 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58722 - "GET /stories/?timeframe=7d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58722 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58722 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58722 - "GET /stories/?timeframe=today&limit=100&persona=explorers HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'backend/routers/stories.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [40704]
+/Users/lohithreddymaddula/Documents/AI Daily/backend/services/embeddings.py:1: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+INFO:     Started server process [42226]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+✅ INFO: DATABASE_URL found. Connecting to Postgres...
+DEBUG: Current CWD: /Users/lohithreddymaddula/Documents/AI Daily
+DEBUG: Checking .env: True
+DEBUG: Engine URL: sqlite+aiosqlite:///./ai_daily.db
+INFO:     127.0.0.1:58786 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58792 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58794 - "GET /stories/?timeframe=today&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58796 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58814 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58813 - "GET /stories/?timeframe=30d&limit=100&persona=executors HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'backend/routers/stories.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [42226]
+/Users/lohithreddymaddula/Documents/AI Daily/backend/services/embeddings.py:1: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+INFO:     Started server process [42265]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+✅ INFO: DATABASE_URL found. Connecting to Postgres...
+DEBUG: Current CWD: /Users/lohithreddymaddula/Documents/AI Daily
+DEBUG: Checking .env: True
+DEBUG: Engine URL: sqlite+aiosqlite:///./ai_daily.db
+INFO:     127.0.0.1:58826 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58828 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58828 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58828 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Open+Source HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58828 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58828 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Open+Source HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58828 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58828 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Markets%2CStrategy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58828 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Enterprise%2CIndustry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58828 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Startups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58828 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Compute HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58828 - "GET /stories/?timeframe=today&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58828 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=AGI+%26+Future HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58828 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=Ethics%2CJobs+%26+Society%2CPolicy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58828 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=Demos+%26+Creativity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58828 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58854 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58856 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58856 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58856 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Open+Source HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58856 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58856 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58856 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Markets%2CStrategy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58856 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Enterprise%2CIndustry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58856 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Startups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58856 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Compute HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58856 - "GET /stories/?timeframe=today&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58856 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58856 - "GET /stories/?timeframe=7d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58857 - "GET /stories/?timeframe=7d&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58857 - "GET /stories/?timeframe=7d&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58857 - "GET /stories/?timeframe=7d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58861 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58872 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58874 - "GET /stories/?timeframe=7d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58875 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58875 - "GET /stories/?timeframe=7d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58875 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58875 - "GET /stories/?timeframe=7d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58875 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58875 - "GET /stories/?timeframe=30d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58878 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58878 - "GET /stories/cce93d27-098f-4644-a065-09b5748415a3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58883 - "GET /stories/cce93d27-098f-4644-a065-09b5748415a3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58925 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58926 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58926 - "GET /stories/3b1c1053-34d0-468c-bf7f-8fdb3db1d54e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58926 - "GET /stories/3b1c1053-34d0-468c-bf7f-8fdb3db1d54e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58958 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58959 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58963 - "GET /stories/e6cf986c-f23c-4381-8aaf-77e67c03a6e6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58965 - "GET /stories/e6cf986c-f23c-4381-8aaf-77e67c03a6e6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59016 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59017 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59019 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59019 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59033 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59033 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Models%2CRAG+%26+Agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59035 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59035 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Open+Source HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59035 - "GET /stories/?timeframe=today&limit=100&persona=builders&category=Papers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59035 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59037 - "GET /stories/?timeframe=today&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59037 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59048 - "GET /stories/7bac4026-1121-43f7-827a-e1cf5ae940cc HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59051 - "GET /stories/7bac4026-1121-43f7-827a-e1cf5ae940cc HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59053 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59053 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59054 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59053 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59054 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59057 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59057 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59058 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59064 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59064 - "GET /stories/?timeframe=today&limit=100&persona=explorers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59064 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=AGI+%26+Future HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59064 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=Ethics%2CJobs+%26+Society%2CPolicy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59064 - "GET /stories/?timeframe=today&limit=100&persona=explorers&category=Demos+%26+Creativity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59064 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59064 - "GET /stories/?timeframe=today&limit=100&persona=executors&category=Markets%2CStrategy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59064 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59064 - "GET /stories/7bac4026-1121-43f7-827a-e1cf5ae940cc HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59066 - "GET /stories/7bac4026-1121-43f7-827a-e1cf5ae940cc HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59067 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59067 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59068 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59068 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59068 - "GET /stories/?timeframe=today&limit=100&persona=executors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59068 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59094 - "GET /stories/cce93d27-098f-4644-a065-09b5748415a3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59095 - "GET /stories/cce93d27-098f-4644-a065-09b5748415a3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59150 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59151 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59151 - "GET /stories/3b1c1053-34d0-468c-bf7f-8fdb3db1d54e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59151 - "GET /stories/3b1c1053-34d0-468c-bf7f-8fdb3db1d54e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59161 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59162 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59166 - "GET /stories/3b1c1053-34d0-468c-bf7f-8fdb3db1d54e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59166 - "GET /stories/3b1c1053-34d0-468c-bf7f-8fdb3db1d54e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59189 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59190 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59192 - "GET /stories/?timeframe=30d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59195 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59195 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59197 - "GET /trends/?days=90 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59197 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59201 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59212 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59213 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59225 - "GET /stories/?timeframe=30d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59233 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59242 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59243 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59253 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+Fetch error https://deepmind.com/blog/feed/basic/: 
+Execution of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-22 17:39:15 EST)" skipped: maximum number of running instances reached (1)
+Fetch error https://blog.google/technology/ai/rss: 
+Execution of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-22 19:39:15 EST)" skipped: maximum number of running instances reached (1)
+INFO:     127.0.0.1:60520 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60526 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60535 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60531 - "GET /trends/?days=90 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60543 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60546 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60559 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60560 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60593 - "GET /stories/?timeframe=30d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60593 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60595 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60593 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60595 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60594 - "GET /trends/?days=90 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60681 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60680 - "GET /stories/?timeframe=30d&limit=100&persona=builders HTTP/1.1" 200 OK
+Fetch error https://huggingface.co/blog/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://deepmind.com/blog/feed/basic/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.google/technology/ai/rss: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://openai.com/blog/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.allenai.org/feed: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://news.mit.edu/topic/artificial-intelligence-rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://hai.stanford.edu/news/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://wandb.ai/fully-connected/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.langchain.dev/rss/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://aws.amazon.com/blogs/machine-learning/feed/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://lilianweng.github.io/lil-log/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://karpathy.ai/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://simonwillison.net/atom/entries/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://openai.com/blog/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://huggingface.co/blog/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.google/technology/ai/rss: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://deepmind.com/blog/feed/basic/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.allenai.org/feed: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://news.mit.edu/topic/artificial-intelligence-rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://hai.stanford.edu/news/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://wandb.ai/fully-connected/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.langchain.dev/rss/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://aws.amazon.com/blogs/machine-learning/feed/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://lilianweng.github.io/lil-log/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://karpathy.ai/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://simonwillison.net/atom/entries/: [Errno 8] nodename nor servname provided, or not known
+Execution of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-23 02:24:15 EST)" skipped: maximum number of running instances reached (1)
+Fetch error https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://deepmind.com/blog/feed/basic/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.google/technology/ai/rss: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://openai.com/blog/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://huggingface.co/blog/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.allenai.org/feed: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://news.mit.edu/topic/artificial-intelligence-rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://hai.stanford.edu/news/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://wandb.ai/fully-connected/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.langchain.dev/rss/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://aws.amazon.com/blogs/machine-learning/feed/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://lilianweng.github.io/lil-log/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://karpathy.ai/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://simonwillison.net/atom/entries/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://openai.com/blog/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://huggingface.co/blog/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.google/technology/ai/rss: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://deepmind.com/blog/feed/basic/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.allenai.org/feed: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://news.mit.edu/topic/artificial-intelligence-rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://hai.stanford.edu/news/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://wandb.ai/fully-connected/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.langchain.dev/rss/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://aws.amazon.com/blogs/machine-learning/feed/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://karpathy.ai/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://lilianweng.github.io/lil-log/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://simonwillison.net/atom/entries/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://huggingface.co/blog/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://openai.com/blog/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.google/technology/ai/rss: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://deepmind.com/blog/feed/basic/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://news.mit.edu/topic/artificial-intelligence-rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.allenai.org/feed: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://hai.stanford.edu/news/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://wandb.ai/fully-connected/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.langchain.dev/rss/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://aws.amazon.com/blogs/machine-learning/feed/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://lilianweng.github.io/lil-log/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://karpathy.ai/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://simonwillison.net/atom/entries/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://openai.com/blog/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://huggingface.co/blog/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.google/technology/ai/rss: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://deepmind.com/blog/feed/basic/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.allenai.org/feed: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://news.mit.edu/topic/artificial-intelligence-rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://hai.stanford.edu/news/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://wandb.ai/fully-connected/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.langchain.dev/rss/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://aws.amazon.com/blogs/machine-learning/feed/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://lilianweng.github.io/lil-log/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://karpathy.ai/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://simonwillison.net/atom/entries/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://deepmind.com/blog/feed/basic/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://huggingface.co/blog/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.google/technology/ai/rss: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://openai.com/blog/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://news.mit.edu/topic/artificial-intelligence-rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.allenai.org/feed: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://hai.stanford.edu/news/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://wandb.ai/fully-connected/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.langchain.dev/rss/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://aws.amazon.com/blogs/machine-learning/feed/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://lilianweng.github.io/lil-log/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://karpathy.ai/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://simonwillison.net/atom/entries/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://deepmind.com/blog/feed/basic/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://huggingface.co/blog/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://openai.com/blog/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.google/technology/ai/rss: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.allenai.org/feed: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://news.mit.edu/topic/artificial-intelligence-rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://hai.stanford.edu/news/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://wandb.ai/fully-connected/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.langchain.dev/rss/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://aws.amazon.com/blogs/machine-learning/feed/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://lilianweng.github.io/lil-log/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://karpathy.ai/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://simonwillison.net/atom/entries/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://openai.com/blog/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://huggingface.co/blog/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.google/technology/ai/rss: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://deepmind.com/blog/feed/basic/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.allenai.org/feed: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://news.mit.edu/topic/artificial-intelligence-rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://hai.stanford.edu/news/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://wandb.ai/fully-connected/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.langchain.dev/rss/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://aws.amazon.com/blogs/machine-learning/feed/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://lilianweng.github.io/lil-log/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://karpathy.ai/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://simonwillison.net/atom/entries/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://deepmind.com/blog/feed/basic/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://openai.com/blog/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.google/technology/ai/rss: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://huggingface.co/blog/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.allenai.org/feed: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://hai.stanford.edu/news/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://news.mit.edu/topic/artificial-intelligence-rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://wandb.ai/fully-connected/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.langchain.dev/rss/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://aws.amazon.com/blogs/machine-learning/feed/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://lilianweng.github.io/lil-log/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://karpathy.ai/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://simonwillison.net/atom/entries/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://openai.com/blog/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://huggingface.co/blog/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.google/technology/ai/rss: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://deepmind.com/blog/feed/basic/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.allenai.org/feed: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://hai.stanford.edu/news/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://wandb.ai/fully-connected/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://news.mit.edu/topic/artificial-intelligence-rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.langchain.dev/rss/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://aws.amazon.com/blogs/machine-learning/feed/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://lilianweng.github.io/lil-log/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://karpathy.ai/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://simonwillison.net/atom/entries/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://openai.com/blog/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://huggingface.co/blog/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://deepmind.com/blog/feed/basic/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.google/technology/ai/rss: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.allenai.org/feed: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://news.mit.edu/topic/artificial-intelligence-rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://hai.stanford.edu/news/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://wandb.ai/fully-connected/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.langchain.dev/rss/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://aws.amazon.com/blogs/machine-learning/feed/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://lilianweng.github.io/lil-log/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://karpathy.ai/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://simonwillison.net/atom/entries/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://openai.com/blog/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://huggingface.co/blog/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.google/technology/ai/rss: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://deepmind.com/blog/feed/basic/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.allenai.org/feed: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://news.mit.edu/topic/artificial-intelligence-rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://hai.stanford.edu/news/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://wandb.ai/fully-connected/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://aws.amazon.com/blogs/machine-learning/feed/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://lilianweng.github.io/lil-log/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://karpathy.ai/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://simonwillison.net/atom/entries/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.langchain.dev/rss/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://deepmind.com/blog/feed/basic/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://openai.com/blog/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.google/technology/ai/rss: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://huggingface.co/blog/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.allenai.org/feed: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://news.mit.edu/topic/artificial-intelligence-rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://hai.stanford.edu/news/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://wandb.ai/fully-connected/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.langchain.dev/rss/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://aws.amazon.com/blogs/machine-learning/feed/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://lilianweng.github.io/lil-log/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://karpathy.ai/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://simonwillison.net/atom/entries/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://openai.com/blog/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://huggingface.co/blog/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.google/technology/ai/rss: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://deepmind.com/blog/feed/basic/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.allenai.org/feed: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://news.mit.edu/topic/artificial-intelligence-rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://hai.stanford.edu/news/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://wandb.ai/fully-connected/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.langchain.dev/rss/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://aws.amazon.com/blogs/machine-learning/feed/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://lilianweng.github.io/lil-log/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://karpathy.ai/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://simonwillison.net/atom/entries/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://simonwillison.net/atom/entries/: 
+Fetch error https://huggingface.co/blog/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://deepmind.com/blog/feed/basic/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://openai.com/blog/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.google/technology/ai/rss: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.allenai.org/feed: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://news.mit.edu/topic/artificial-intelligence-rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://hai.stanford.edu/news/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://wandb.ai/fully-connected/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.langchain.dev/rss/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://aws.amazon.com/blogs/machine-learning/feed/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://lilianweng.github.io/lil-log/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://karpathy.ai/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://simonwillison.net/atom/entries/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://openai.com/blog/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://huggingface.co/blog/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.google/technology/ai/rss: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://deepmind.com/blog/feed/basic/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.allenai.org/feed: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://news.mit.edu/topic/artificial-intelligence-rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://hai.stanford.edu/news/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://wandb.ai/fully-connected/rss.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://blog.langchain.dev/rss/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://aws.amazon.com/blogs/machine-learning/feed/: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://lilianweng.github.io/lil-log/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://karpathy.ai/feed.xml: [Errno 8] nodename nor servname provided, or not known
+Fetch error https://simonwillison.net/atom/entries/: [Errno 8] nodename nor servname provided, or not known
+INFO:     127.0.0.1:61393 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61411 - "GET /stories/3b1c1053-34d0-468c-bf7f-8fdb3db1d54e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61412 - "GET /stories/3b1c1053-34d0-468c-bf7f-8fdb3db1d54e HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'backend/models.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [42265]
+/Users/lohithreddymaddula/Documents/AI Daily/backend/services/embeddings.py:1: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+INFO:     Started server process [48294]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'backend/scripts/compute_universe.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48294]
+WARNING:  WatchFiles detected changes in 'backend/scripts/compute_universe.py'. Reloading...
+/Users/lohithreddymaddula/Documents/AI Daily/backend/services/embeddings.py:1: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+INFO:     Started server process [48310]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'backend/scripts/compute_universe.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48310]
+/Users/lohithreddymaddula/Documents/AI Daily/backend/services/embeddings.py:1: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+INFO:     Started server process [49277]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'backend/services/trends.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [49277]
+/Users/lohithreddymaddula/Documents/AI Daily/backend/services/embeddings.py:1: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+INFO:     Started server process [49413]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+✅ INFO: DATABASE_URL found. Connecting to Postgres...
+DEBUG: Current CWD: /Users/lohithreddymaddula/Documents/AI Daily
+DEBUG: Checking .env: True
+DEBUG: Engine URL: sqlite+aiosqlite:///./ai_daily.db
+INFO:     127.0.0.1:61606 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61605 - "GET /stories/?timeframe=30d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61606 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61606 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61635 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61634 - "GET /trends/?days=30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61634 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61636 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61639 - "GET /trends/?days=90 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61639 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61644 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61683 - "GET /stories/?timeframe=90d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61684 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61683 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61690 - "GET /trends/?days=90 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61690 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61694 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61737 - "GET /stories/?timeframe=90d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61738 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61738 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61745 - "GET /trends/?days=90 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61745 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61748 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61777 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61778 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61778 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61780 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61780 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61778 - "GET /trends/?days=90 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61787 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61800 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61801 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61803 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61801 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61803 - "GET /trends/universe?limit=800 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61800 - "GET /trends/?days=90 HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'backend/routers/trends.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [49413]
+/Users/lohithreddymaddula/Documents/AI Daily/backend/services/embeddings.py:1: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+INFO:     Started server process [49595]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+✅ INFO: DATABASE_URL found. Connecting to Postgres...
+DEBUG: Current CWD: /Users/lohithreddymaddula/Documents/AI Daily
+DEBUG: Checking .env: True
+DEBUG: Engine URL: sqlite+aiosqlite:///./ai_daily.db
+INFO:     127.0.0.1:61906 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61905 - "GET /stories/?timeframe=90d&limit=100&persona=builders HTTP/1.1" 200 OK
+LLM Call Error (attempt 1): 429 Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.
+INFO:     127.0.0.1:61906 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61905 - "GET /trends/universe?limit=3600 HTTP/1.1" 200 OK
+JSON Parse failed (attempt 1). Trying repair...
+INFO:     127.0.0.1:61916 - "GET /trends/universe?limit=3600 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61913 - "GET /trends/?days=90 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61913 - "GET /trends/universe?limit=3600 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61923 - "GET /trends/universe?limit=3600 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61970 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61969 - "GET /stories/?timeframe=90d&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61970 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61969 - "GET /trends/?days=90 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61975 - "GET /trends/universe?limit=3600 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61969 - "GET /trends/universe?limit=3600 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62080 - "GET /stories/?timeframe=today&limit=100&persona=builders HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62081 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62083 - "GET /trends/?days=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62080 - "GET /trends/?days=90 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62081 - "GET /trends/universe?limit=3600 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62080 - "GET /trends/universe?limit=3600 HTTP/1.1" 200 OK
+LLM Call Error (attempt 1): 429 Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.
+Execution of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-23 14:35:27 EST)" skipped: maximum number of running instances reached (1)
+Execution of job "full_pipeline (trigger: interval[1:00:00], next run at: 2026-02-23 15:05:27 EST)" skipped: maximum number of running instances reached (1)
+Execution of job "job_ingest_feeds (trigger: interval[0:15:00], next run at: 2026-02-23 15:05:27 EST)" skipped: maximum number of running instances reached (1)
+Error processing source 5: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) database is locked
+[SQL: UPDATE sources SET last_fetched_at=? WHERE sources.id = ?]
+[parameters: ('2026-02-23 19:51:25.044125', 5)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8) (Background on this error at: https://sqlalche.me/e/20/7s2a)
+Error processing source 6: (sqlite3.OperationalError) database is locked
+[SQL: UPDATE sources SET last_fetched_at=? WHERE sources.id = ?]
+[parameters: ('2026-02-23 19:51:24.406490', 6)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Error processing source 7: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) database is locked
+[SQL: UPDATE sources SET last_fetched_at=? WHERE sources.id = ?]
+[parameters: ('2026-02-23 19:51:25.148307', 7)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8) (Background on this error at: https://sqlalche.me/e/20/7s2a)
+Error processing source 10: (sqlite3.OperationalError) database is locked
+[SQL: UPDATE sources SET fail_count=? WHERE sources.id = ?]
+[parameters: (309, 10)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Error processing source 7: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) database is locked
+[SQL: UPDATE sources SET last_fetched_at=? WHERE sources.id = ?]
+[parameters: ('2026-02-23 21:05:45.924311', 7)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8) (Background on this error at: https://sqlalche.me/e/20/7s2a)
+Fetch error https://simonwillison.net/atom/entries/: 
+Fetch error https://blog.google/technology/ai/rss: 
+Fetch error https://blog.google/technology/ai/rss: 
