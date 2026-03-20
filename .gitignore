@@ -24,3 +24,8 @@ build/
 # IDE
 .vscode/
 .idea/
+
+# Ignored files
+.env*
+*.zip
+
